@@ -20,19 +20,7 @@
 	
 	<h2>Connectez-vous dès maintenant :</h2>
 	
-	<form action="jsp/dashboard.jsp" method="post" class="loginnForm">
-		<div class="loginnForm">
-			<label for="email">E-mail : </label>
-			<input type="email" name="email" id="email" required>
-		</div>
-		<div class="loginnForm">
-			<label for="password">Mot de passe : </label>
-			<input type="password" name="password" id="password" required>
-		</div>
-		<div class="loginnForm">
-    		<input type="submit" value="Connexion">
-  		</div>
-	</form>
+	<%@ include file="login.jsp" %>
 
 </body>
 </html>

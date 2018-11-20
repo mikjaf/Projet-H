@@ -1,15 +1,35 @@
 package fr.projet.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import fr.projet.beans.Subscriber;
-import fr.projet.dao.DaoInterface;
+import fr.projet.dao.SubscriberInterfaceDao;
 
 @Controller
 public class LoginController {
 	
 	@Autowired
-	private DaoInterface<Subscriber> dao;
+	@Qualifier("subscriberDao")
+	private SubscriberInterfaceDao subscriberDao;
+	
+	@PostMapping("/connect")
+	public String connect(Model model,
+			@RequestParam("email") String email, 
+			@RequestParam("password")  String password) {
+		
+		Subscriber subscriber = subscriberDao.findByEmail(email);
+		
+		if (email != null && !email.equals("") && password != null && !password.equals("") && subscriber != null && password.equals(subscriber.getPassword())) {
+			return "dashboard";
+		}
+		else {
+			return "errorLogin";
+		}
+	}
 
 }

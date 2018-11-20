@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import fr.projet.beans.Subscriber;
-import fr.projet.dao.DaoInterface;
+import fr.projet.dao.SubscriberInterfaceDao;
 
 @Controller
 public class RegisterController {
 	
 	@Autowired
 	@Qualifier("subscriberDao")
-	private DaoInterface<Subscriber> subscriberDao;
+	private SubscriberInterfaceDao subscriberDao;
 	
 	@PostMapping("/addSubscriber")
 	public String addSubscriber(Model model, 
@@ -24,6 +24,7 @@ public class RegisterController {
 			@RequestParam("email") String email,
 			@RequestParam("phone") String phone,
 			@RequestParam("password") String password) {
+		
 		Subscriber subscriber = new Subscriber();
 		subscriber.setLastName(lastName);
 		subscriber.setFirstName(firstName);
@@ -35,5 +36,7 @@ public class RegisterController {
 		
 		return "registerConfirm";
 	}
+	
+	
 
 }
