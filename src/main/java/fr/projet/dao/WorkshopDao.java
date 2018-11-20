@@ -20,7 +20,7 @@ public class WorkshopDao implements DaoInterface<Workshop> {
 		Session session = sessionFactory.getCurrentSession();
 		if(item.getId() == null) {
 			session.persist(item);
-		}
+		} 
 		else {
 			session.merge(item);
 		}
