@@ -12,23 +12,24 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
+		
 <title>Liste des rénuions</title>
 </head>
 
 <body>
 	<h1>Liste des réunions</h1>
 	
-	<h3></h3>
 	<table>
 		<tr>
 			<th>Sujet de la réunion</th>
 			<th>Date</th>
 		</tr>
-		<core:forEach var="meeting" items="${ meetingsList }"></core:forEach>
+		<core:forEach var="meeting" items="${ meetingsList }">
 		<tr>
-			<td>${ meeting.topic }</td>
+			<td><a href="event/meeting/${ meeting.id }">${ meeting.topic }</a></td>
 			<td>${ meeting.date }<td>
-		</table>
+		</core:forEach>
+	</table>
 		
 </body>
 </html>

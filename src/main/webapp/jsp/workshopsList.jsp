@@ -19,7 +19,6 @@
 <body>
 	<h1>Liste des ateliers</h1>
 	
-	
 	<table>
 		<tr>
 			<th>Thème de l'atelier</th>

@@ -25,6 +25,7 @@
 		<input type="text" placeholder="matériel" id="equipment" name="equipment" required/><br/>
 		<label for="description">Description</label>
 		<input type="text" placeholder="description" id="description" name="description" required/><br/>
+		<!-- <label for="participantNumber">Nombre de participants</label> -->
 		<input type="submit" value="Ajouter" />
 	
 	</form>

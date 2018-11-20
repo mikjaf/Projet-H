@@ -67,5 +67,38 @@ public class CreateEventController {
 	
 	////////////////////////////////////////////////////////////
 	
+	// pour arriver sur le formulaire CreateMeeting
+	@GetMapping("/createMeeting")
+	public String showCreateMeeting() {
+		return "createMeetingForm";
+	}
+	
+	@PostMapping("/createMeeting")
+	public String addMeeting(Model model,
+		@RequestParam("topic") String topic,
+		@DateTimeFormat(iso=ISO.DATE)
+		@RequestParam("date") Date date,
+		@RequestParam("durationTime") Integer durationTime,
+		@RequestParam("description") String description) {
+		
+		Meeting meeting = new Meeting ();
+		meeting.setTopic(topic);
+		meeting.setDate(date);
+		meeting.setDurationTime(durationTime);
+		meeting.setDescription(description);
+		
+		meeting = meetingDao.createOrUpdate(meeting);
+		
+		model.addAttribute("meetingsList", meetingDao.findAll());
+		
+		return "meetingsList";
+	}
+	
+	@GetMapping("/meeting/{id}")
+	public String showMeeting(@PathVariable("id") Long id, Model model) {
+		Meeting meeting = meetingDao.findById(id);
+		model.addAttribute("meeting", meeting);
+		return "meeting";
+	}
 	
 }
