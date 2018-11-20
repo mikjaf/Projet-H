@@ -3,6 +3,7 @@ package fr.projet.controller;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import fr.projet.beans.Meeting;
 import fr.projet.beans.Workshop;
 import fr.projet.dao.DaoInterface;
 
@@ -21,8 +23,14 @@ import fr.projet.dao.DaoInterface;
 public class CreateEventController {
 
 	@Autowired
-	private DaoInterface<Workshop> dao;
+	@Qualifier("workshopDao")
+	private DaoInterface<Workshop> workshopDao;
+	
+	@Autowired
+	@Qualifier("meetingDao")
+	private DaoInterface<Meeting> meetingDao;
 
+	// pour arriver sur le formulaire CreateWorkshop
 	@GetMapping("/createWorkshop")
 	public String showCreateWorkshop() {
 		return "createWorkshopForm";
@@ -42,17 +50,22 @@ public class CreateEventController {
 		workshop.setEquipment(equipment);
 		workshop.setDescription(description);
 
-		workshop = dao.createOrUpdate(workshop);
+		workshop = workshopDao.createOrUpdate(workshop);
 
-		model.addAttribute("workshopsList", dao.findAll());
+		model.addAttribute("workshopsList", workshopDao.findAll());
 //		System.out.println("fin createWorkshop");
 		return "workshopsList";
 	}
 	
 	@GetMapping("/workshop/{id}")
 	public String showWorkshop(@PathVariable("id") Long id, Model model) {
-		Workshop workshop = dao.findById(id);
+		Workshop workshop = workshopDao.findById(id);
 		model.addAttribute("workshop",  workshop);
 		return "workshop";
 	}
+	
+	
+	////////////////////////////////////////////////////////////
+	
+	
 }

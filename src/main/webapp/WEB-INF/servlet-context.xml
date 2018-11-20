@@ -19,8 +19,8 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-	<bean id="hibernateDao" class="fr.projet.dao.WorkshopDao"></bean>
-	
+	<bean id="workshopDao" class="fr.projet.dao.WorkshopDao"></bean>
+	<bean id="meetingDao" class="fr.projet.dao.MeetingDao"></bean>
 
 
 	<!-- **************************************************************************************** -->
