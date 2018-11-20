@@ -20,14 +20,14 @@
 	<br/>
 	
 	<h2>S'inscrire</h2>
-	<form action="jsp/registerConfirm.jsp" method="post" class="registerForm">
-		<div class="registerForm">
-			<label for="firstname">Prenom </label>
-			<input type="text" placeholder="Prénom" name="firstname" id="firstname" required>
-		</div>
+	<form action="addSubscriber" method="post" class="registerForm">
 		<div class="registerForm">
 			<label for="lastname">Nom </label>
 			<input type="text" placeholder="Nom" name="lastname" id="lastname" required>
+		</div>
+		<div class="registerForm">
+			<label for="firstname">Prenom </label>
+			<input type="text" placeholder="Prénom" name="firstname" id="firstname" required>
 		</div>
 		<div class="registerForm">
 			<label for="email">E-mail </label>
