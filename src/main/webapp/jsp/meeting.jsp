@@ -13,19 +13,22 @@
 </head>
 <body>
 
-	<h1>${ eventType} : ${ meeting.topic }</h1>
+	<h1>Réunion : ${ meeting.topic }</h1>
 	
 	<div id="meetingPlace">
-			${ event.location }
+			${ meeting.location }
 	</div>
 	<div id="meetingDate">
-			${ event.date }
+			${ meeting.date }
+	</div>
+	<div id="durationTime">
+			${ meeting.durationTime }
 	</div>
 	<div id="meetingParticipantsNb">
 			<input type="submit" value="Je participe" />
 	</div>
 	<div id="meetingDescription">
-			${ event.description }
+			${ meeting.description }
 	</div>
 </body>
 </html>
