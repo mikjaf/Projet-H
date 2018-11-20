@@ -1,21 +1,18 @@
 <html>
+<head>
+	<meta charset="ISO-8859-1">
+	<base href="<%=request.getScheme() + "://"
+		+ request.getServerName() + ":"
+		+ request.getServerPort()
+		+ request.getContextPath() + "/"
+		%>" />
+</head>
 <body>
 	<h1>Accueil</h1>
 
 	<h2>Se connecter</h2>
-	<form action="jsp/dashboard.jsp" method="post" class="loginnForm">
-		<div class="loginnForm">
-			<label for="email">E-mail : </label>
-			<input type="email" name="email" id="email" required>
-		</div>
-		<div class="loginnForm">
-			<label for="password">Mot de passe : </label>
-			<input type="password" name="password" id="password" required>
-		</div>
-		<div class="loginnForm">
-    		<input type="submit" value="Connexion">
-  		</div>
-	</form>
+	
+	<%@ include file="jsp/login.jsp" %>
 	
 	<br/>
 	
@@ -23,11 +20,11 @@
 	<form action="addSubscriber" method="post" class="registerForm">
 		<div class="registerForm">
 			<label for="lastname">Nom </label>
-			<input type="text" placeholder="Nom" name="lastname" id="lastname" required>
+			<input type="text" placeholder="Nom" name="lastName" id="lastname" required>
 		</div>
 		<div class="registerForm">
 			<label for="firstname">Prenom </label>
-			<input type="text" placeholder="Prénom" name="firstname" id="firstname" required>
+			<input type="text" placeholder="Prénom" name="firstName" id="firstname" required>
 		</div>
 		<div class="registerForm">
 			<label for="email">E-mail </label>
@@ -41,10 +38,10 @@
 			<label for="password">Mot de passe </label>
 			<input type="password" placeholder="Mot de passe" name="password" id="password" required>
 		</div>
-		<div class="registerForm">
+		<!-- <div class="registerForm">
 			<label for="confirm_password">Confirmer mot de passe </label>
 			<input type="password" placeholder="Confirmer mot de passe" name="confirm_password" id="confirm_password" required>
-		</div>
+		</div> -->
 		<div class="registerForm">
     		<input type="submit" value="Connexion">
   		</div>

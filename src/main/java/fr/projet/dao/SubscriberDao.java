@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import fr.projet.beans.Subscriber;
 
 @Transactional
-public class SubscriberDao implements DaoInterface<Subscriber> {
+public class SubscriberDao implements SubscriberInterfaceDao {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -50,6 +50,23 @@ public class SubscriberDao implements DaoInterface<Subscriber> {
 		session.remove(subscriber);
 	}
 	
+	
+	
+	/////
+	
+	
+	public Subscriber findByEmail(String email) {
+
+		Session session = sessionFactory.getCurrentSession();
+		TypedQuery<Subscriber> query = session.createQuery("SELECT entity FROM Subscriber entity WHERE entity.email='" + email + "'", Subscriber.class);
+		
+		List<Subscriber> subscriberList = query.getResultList();
+		if (subscriberList.size() == 1) {
+			return subscriberList.get(0);
+		}
+		
+		return null;
+	}
 	
 	
 
