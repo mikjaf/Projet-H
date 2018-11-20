@@ -9,14 +9,16 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import fr.projet.beans.Workshop;
+import fr.projet.beans.Subscriber;
+
 @Transactional
-public class WorkshopDao implements DaoInterface<Workshop> {
+public class SubscriberDao implements DaoInterface<Subscriber> {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
-	
+
 	@Override
-	public Workshop createOrUpdate(Workshop item) {
+	public Subscriber createOrUpdate(Subscriber item) {
 		Session session = sessionFactory.getCurrentSession();
 		if(item.getId() == null) {
 			session.persist(item);
@@ -27,25 +29,28 @@ public class WorkshopDao implements DaoInterface<Workshop> {
 		
 		return item;
 	}
-	
 
 	@Override
-	public Workshop findById(Long id) {
+	public Subscriber findById(Long id) {
 		Session session = sessionFactory.getCurrentSession();
-		return session.find(Workshop.class, id);
+		return session.find(Subscriber.class, id);
 	}
 
 	@Override
-	public List<Workshop> findAll() {
+	public List<Subscriber> findAll() {
 		Session session = sessionFactory.getCurrentSession();
-		TypedQuery<Workshop> query = session.createQuery("SELECT entity FROM Workshop entity", Workshop.class);
+		TypedQuery<Subscriber> query = session.createQuery("SELECT entity FROM Subscriber entity", Subscriber.class);
 		return query.getResultList();
 	}
 
 	@Override
 	public void delete(Long id) {
 		Session session = sessionFactory.getCurrentSession();
-		Workshop workshop = findById(id);
-		session.remove(workshop);
+		Subscriber subscriber = findById(id);
+		session.remove(subscriber);
 	}
+	
+	
+	
+
 }
