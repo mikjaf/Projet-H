@@ -10,8 +10,10 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.projet.beans.Workshop;
+
 @Transactional
 public class WorkshopDao implements DaoInterface<Workshop> {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	

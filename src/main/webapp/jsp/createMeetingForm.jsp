@@ -17,14 +17,18 @@
 	
 	<form action="event/createMeeting" method="post">
 		<label for="topic">Sujet</label>
-		<input type="text" placeholder="thème" id="topic" name="topic" required/><br/>
+		<input type="text" placeholder="sujet" id="topic" name="topic" required/>
+		<br/>
 		<label for="date">Date</label>
-		<input type="date" id="date" name="date"/><br/>
+		<input type="date" id="date" name="date"/>
+		<br/>
 		<label for="durationTime">Durée</label>
-		<input type="text" placeholder="durée" id="durationTime" name="durationTime" required/><br/>
+		<input type="text" placeholder="durée" id="durationTime" name="durationTime" required/>
+		<br/>
 		<!-- <label for="location">Lieu</label> -->
 		<label for="description">Description</label>
-		<input type="text" placeholder="description" id="description" name="description" required/><br/>
+		<input type="text" placeholder="description" id="description" name="description" required/>
+		<br/>
 		<!-- <label for="participantNumber">Nombre de participants</label> -->
 		<input type="submit" value="Ajouter" />
 		

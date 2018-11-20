@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import fr.projet.beans.Competition;
+import fr.projet.beans.Match;
 import fr.projet.beans.Meeting;
+import fr.projet.beans.Transport;
 import fr.projet.beans.Workshop;
 import fr.projet.dao.DaoInterface;
 
@@ -29,6 +32,10 @@ public class CreateEventController {
 	@Autowired
 	@Qualifier("meetingDao")
 	private DaoInterface<Meeting> meetingDao;
+	
+	@Autowired
+	@Qualifier("matchDao")
+	private DaoInterface<Match> matchDao;
 
 	// pour arriver sur le formulaire CreateWorkshop
 	@GetMapping("/createWorkshop")
@@ -80,7 +87,7 @@ public class CreateEventController {
 		@RequestParam("date") Date date,
 		@RequestParam("durationTime") Integer durationTime,
 		@RequestParam("description") String description) {
-		
+
 		Meeting meeting = new Meeting ();
 		meeting.setTopic(topic);
 		meeting.setDate(date);
@@ -90,7 +97,7 @@ public class CreateEventController {
 		meeting = meetingDao.createOrUpdate(meeting);
 		
 		model.addAttribute("meetingsList", meetingDao.findAll());
-		
+		System.out.println("fin createMeeting");
 		return "meetingsList";
 	}
 	
@@ -101,4 +108,52 @@ public class CreateEventController {
 		return "meeting";
 	}
 	
+	
+	////////////////////////////////////////////////////////////
+	
+	// pour arriver sur le formulaire CreateMatch
+	@GetMapping("/createMatch")
+	public String showCreateMatch() {
+		return "createMatchForm";
+	}
+	
+	@PostMapping("/createMatch")
+	public String addMatch(Model model,
+			@RequestParam("title") String title,
+			@DateTimeFormat(iso=ISO.DATE)
+			@RequestParam("date") Date date,
+			@RequestParam("competitionType") Competition competition,
+			@RequestParam("description") String description,
+			@RequestParam("homeAway") Boolean homeAway,
+			@RequestParam("transportation") String transportation,
+			@RequestParam("departureTime") Date departureTime,
+			@RequestParam("arrivalTime") Date arrivalTime,
+			@RequestParam("participantMax") Integer participantMax) {
+			
+			Match match = new Match ();
+			match.setTitle(title);
+			match.setDate(date);
+			match.setCompetitionType(competition);
+			match.setDescription(description);
+			match.setHomeAway(homeAway);
+			
+			Transport transport = new Transport ();
+			transport.setTransportation(transportation);
+			transport.setDepartureTime(departureTime);
+			transport.setArrivalTime(arrivalTime);
+			transport.setParticipantMax(participantMax);
+			
+			match = matchDao.createOrUpdate(match);
+			
+			model.addAttribute("matchsList", matchDao.findAll());
+			
+		return "matchsList";
+	}
+	
+	@GetMapping("/match/{id}")
+	public String showMatch(@PathVariable("id") Long id, Model model) {
+		Match match = matchDao.findById(id);
+		model.addAttribute("match", match);
+		return "match";
+	}
 }

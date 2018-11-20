@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.projet.beans.Meeting;
+
 @Transactional
 public class MeetingDao implements DaoInterface<Meeting>{
 
@@ -29,6 +30,7 @@ public class MeetingDao implements DaoInterface<Meeting>{
 		return item;
 	}
 
+	
 	@Override
 	public Meeting findById(Long id) {
 		Session session = sessionFactory.getCurrentSession();

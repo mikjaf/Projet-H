@@ -17,14 +17,18 @@
 
 	<form action="event/createWorkshop" method="post">
 		<label for="topic">Thème</label>
-		<input type="text" placeholder="thème" id="topic" name="theme" required/><br/>
+		<input type="text" placeholder="thème" id="topic" name="theme" required/>
+		<br/>
 		<label for="date">Date</label>
-		<input type="date" id="date" name="date"/><br/>
+		<input type="date" id="date" name="date"/>
+		<br/>
 		<!-- <label for="location">Lieu</label> -->
 		<label for="equipment">Matériel</label>
-		<input type="text" placeholder="matériel" id="equipment" name="equipment" required/><br/>
+		<input type="text" placeholder="matériel" id="equipment" name="equipment" required/>
+		<br/>
 		<label for="description">Description</label>
-		<input type="text" placeholder="description" id="description" name="description" required/><br/>
+		<input type="text" placeholder="description" id="description" name="description" required/>
+		<br/>
 		<!-- <label for="participantNumber">Nombre de participants</label> -->
 		<input type="submit" value="Ajouter" />
 	

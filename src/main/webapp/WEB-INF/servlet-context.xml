@@ -22,6 +22,7 @@
 	<bean id="workshopDao" class="fr.projet.dao.WorkshopDao"></bean>
 	<bean id="meetingDao" class="fr.projet.dao.MeetingDao"></bean>
 	<bean id="subscriberDao" class="fr.projet.dao.SubscriberDao"></bean>
+	<bean id="matchDao" class="fr.projet.dao.MatchDao"></bean>  
 
 
 	<!-- **************************************************************************************** -->

@@ -12,6 +12,7 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
+		
 <title>Liste des matchs</title>
 </head>
 
@@ -23,11 +24,12 @@
 			<th>Nom du match</th>
 			<th>Date</th>
 		</tr>
-		<core:forEach var="match" items="gamesList"></core:forEach>
+		<core:forEach var="match" items=${ matchsList }>
 		<tr>
-			<td>${ match.title }</td>
+			<td><a href="event/match/${ match.id }">${ match.title }</a></td>
 			<td>${ match.date }</td>
 		</tr>
+		</core:forEach>
 	</table>
 	
 </body>

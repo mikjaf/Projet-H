@@ -22,9 +22,12 @@
 	<div id="workshopDate">
 			${ workshop.date }
 	</div>
+	<div id="workshopEquipment">
+			${ workshop.equipment }
+	</div>
 	<div id="workshopParticipantsNb">
 			<input type="submit" value="Je participe" />
-			
+			<%-- ${ workshop.participantNumber } --%>
 	</div>
 	<div id="workshopDescription">
 			${ workshop.description }

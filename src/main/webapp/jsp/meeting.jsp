@@ -27,6 +27,7 @@
 	</div>
 	<div id="meetingParticipantsNb">
 			<input type="submit" value="Je participe" />
+			<%-- ${ meeting.participantNumber } --%>
 	</div>
 	<div id="meetingDescription">
 			${ meeting.description }
