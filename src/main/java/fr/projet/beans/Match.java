@@ -16,7 +16,7 @@ public class Match extends Event {
 	private String title;
 	private Boolean homeAway;
 	
-	@ManyToMany(mappedBy="gamesList")
+	@ManyToMany(mappedBy="matchsList")
 	private List<Subscriber> subscribersList = new ArrayList<Subscriber>();
 	
 	@OneToOne
@@ -55,6 +55,31 @@ public class Match extends Event {
 
 	public void setHomeAway(Boolean homeAway) {
 		this.homeAway = homeAway;
+	}
+
+
+	public List<Subscriber> getSubscribersList() {
+		return subscribersList;
+	}
+
+
+	public void setSubscribersList(List<Subscriber> subscribersList) {
+		this.subscribersList = subscribersList;
+	}
+
+
+	public Transport getTransport() {
+		return transport;
+	}
+
+
+	public void setTransport(Transport transport) {
+		this.transport = transport;
+	}
+
+
+	public Boolean getHomeAway() {
+		return homeAway;
 	}
 
 

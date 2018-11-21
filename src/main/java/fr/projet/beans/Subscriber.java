@@ -20,7 +20,7 @@ public class Subscriber extends IdObject {
 	private List<Workshop> workshopsList = new ArrayList<Workshop>();
 	
 	@ManyToMany
-	private List<Match> gamesList = new ArrayList<Match>();
+	private List<Match> matchsList = new ArrayList<Match>();
 	
 	@ManyToMany
 	private List<Meeting> meetingsList = new ArrayList<Meeting>();

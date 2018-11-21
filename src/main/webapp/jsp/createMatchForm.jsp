@@ -23,7 +23,7 @@
 		<label for="date">Date</label>
 		<input type="date" id="date" name="date"/>
 		<br/>
-		<label for="competitionType">Compétition</label>
+		<label for="competition">Compétition</label>
 		<select name="competition" id="competition">
 			<option value="Championnat">Championnat</option>
 			<option value="CoupeFrance">Coupe de France</option>
@@ -31,27 +31,30 @@
 			<option value="ChampionsLeague">Ligue des Champions</option>		
 		</select>
 		<br/>
+		
 		<!-- <label for="location">Lieu</label> -->
 		
 		<label for="description">Description</label>
 		<input type="text" placeholder="description" id="description" name="description" required/>
 		<br/>
 		<label for="homeAway">Match</label>
-             <input type="radio" name="homeAway" value="Domicile" id="Domicile" placeholder="Domicile">
              <label for="Domicile">Domicile</label>
-             <input type="radio" name="homeAway" value="Extérieur" id="Extérieur" placeholder="Extérieur">
+             <input type="radio" name="homeAway" value="Domicile" id="Domicile" placeholder="Domicile">
              <label for="Extérieur">Extérieur</label>
-		<!-- <label for="participantNumber">Nombre de participants</label> -->
+             <input type="radio" name="homeAway" value="Extérieur" id="Extérieur" placeholder="Extérieur">
+        <br/>                 
+		
 		
 		<p>En cas de matchs à l'extérieur, l'association propose un déplacement</p>
+		
 		<label for="transportation">Transport</label>
 		<input type="text" placeholder="transport" id="transportation" name="transportation" />
 		<br/>
 		<label for="departureTime">Heure de départ</label>
-		<input type="date" id="departureTime" name="departureTime"/>
+		<input type="time" id="departureTime" name="departureTime">
 		<br/>
 		<label for="arrivalTime">Heure de retour</label>
-		<input type="date" id="arrivalTime" name="arrivalTime"/>
+		<input type="time" id="arrivalTime" name="arrivalTime"/> 
 		<br/>
 		<label for="participantMax">Nombre de places maximales</label>
 		<input type="number" placeholder="Nombre de places" id="participantMax" name="participantMax"/>

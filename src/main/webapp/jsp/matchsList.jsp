@@ -24,7 +24,7 @@
 			<th>Nom du match</th>
 			<th>Date</th>
 		</tr>
-		<core:forEach var="match" items=${ matchsList }>
+		<core:forEach var="match" items="${ matchsList }">
 		<tr>
 			<td><a href="event/match/${ match.id }">${ match.title }</a></td>
 			<td>${ match.date }</td>
