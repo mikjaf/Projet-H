@@ -1,4 +1,11 @@
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
 
-<h1>PROJET H - L'agenda des supporters</h1>
+<p>PROJET H - L'agenda des supporters</p>
+		
+<div id=header>
+	<ul>
+		<li><a href="event/workshopsList">Liste des ateliers</a></li>	
+		<li><a href="event/meetingsList">Liste des réunions</a></li>
+		<li><a href="event/matchsList">Liste des matchs</a></li>
+		<!-- <li><a href="userEventsList.jsp">Espace utilisateur</a></li> -->
+	</ul>	
+</div>

@@ -10,10 +10,15 @@
 		+ request.getContextPath() + "/"
 		%>" />
 <title>Créer un atelier</title>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
 
-	<h2>Créer un atelier</h2>
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
+	
+	<h1>Créer un atelier</h1>
 
 	<form action="event/createWorkshop" method="post">
 		<label for="topic">Thème</label>

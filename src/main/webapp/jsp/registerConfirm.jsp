@@ -10,10 +10,15 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 
 <body>
 
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
+	
 	<h1>Confirmation d'inscription</h1>
 	
 	<p>Bravo <i>Prénom</i>, vous êtes inscrit !</p>

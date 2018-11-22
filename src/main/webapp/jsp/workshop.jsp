@@ -9,11 +9,16 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
-		
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+
 <title>Atelier</title>
 </head>
 <body>
 
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
+	
 	<h1>Atelier : ${ workshop.theme }</h1>
 	
 	<div id="workshopPlace">

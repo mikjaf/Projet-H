@@ -10,10 +10,15 @@
 		+ request.getContextPath() + "/"
 		%>" />
 <title>Créer une réunion</title>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
 
-	<h2>Créer une réunion</h2>
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
+	
+	<h1>Créer une réunion</h1>
 	
 	<form action="event/createMeeting" method="post">
 		<label for="topic">Sujet</label>

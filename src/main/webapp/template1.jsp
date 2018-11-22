@@ -9,7 +9,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Projet H</title>
-	<decorator:title></decorator:title> 
 	<base href="<%=request.getScheme() + "://"
 		+ request.getServerName() + ":"
 		+ request.getServerPort()
@@ -17,7 +16,8 @@
 		%>" />
 </head>
 <body>
-	<jsp:include page="header.jsp"/>
+	<jsp:include page="jsp/header.jsp" />
+			
 	
 	<decorator:body></decorator:body>
 	

@@ -17,4 +17,12 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 		<servlet-name>springDispatcherServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<!-- <filter>
+ 	 <filter-name>sitemesh</filter-name>
+	 <filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+  </filter>
+  <filter-mapping>
+ 	 <filter-name>sitemesh</filter-name>
+ 	 <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
 </web-app>

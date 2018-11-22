@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
-    
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,29 +11,26 @@
 		%>" />
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
 		
-<title>Liste des ateliers</title>
+<title>Mes événements</title>
 </head>
-
 <body>
+
 	<jsp:include page="header.jsp" />
 	<br>
 	<br>
 	
-	<h1>Liste des ateliers</h1>
+	<h1>Mes événements</h1>
 	
-	<table>
-		<tr>
-			<th>Thème de l'atelier</th>
-			<th>Date</th>
-		</tr>
-		<core:forEach var="workshop" items="${ workshopsList }">
-		<tr>
-			<td><a href="event/workshop/${ workshop.id }">${ workshop.theme }</a></td>
-			<td>${ workshop.date }</td>
-		</tr>
-	</core:forEach>
+	<div>
+		<h2>Mes ateliers</h2>
+	</div>
 	
-	</table>
+	<div>
+		<h2>Mes réunions</h2>
+	</div>
 	
+	<div>
+		<h2>Mes matchs</h2>
+	</div>
 </body>
 </html>

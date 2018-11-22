@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+
+#header{ 
+    width: 100%;
+ } 
+    
+div > ul > li{
+	float: left;
+}
+ 
+div li{
+    list-style-type: none;
+    text-align: center
+}
+    
+div > ul > li a{
+	width: 150px;
+	padding: 5px;
+	display: block;
+	text-decoration: none;
+}

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +12,14 @@
 		%>" />
 		
 <title>Ajouter un match</title>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-
-	<h2>Ajouter un match</h2>
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
+	
+	<h1>Ajouter un match</h1>
 	
 	<form method="post" action="event/createMatch">
 		<label for="topic">Titre</label>
@@ -37,7 +42,7 @@
 		<label for="description">Description</label>
 		<input type="text" placeholder="description" id="description" name="description" required/>
 		<br/>
-		<label for="homeAway">Match</label>
+		<label for="homeAway">Match : </label>
              <label for="Domicile">Domicile</label>
              <input type="radio" name="homeAway" value="Domicile" id="Domicile" placeholder="Domicile">
              <label for="Extérieur">Extérieur</label>
@@ -51,11 +56,11 @@
 		<input type="text" placeholder="transport" id="transportation" name="transportation" />
 		<br/>
 		<label for="departureTime">Heure de départ</label>
-		<input type="time" id="departureTime" name="departureTime">
+		<input type="text" id="departureTime" name="departureTime">
 		<br/>
 		<label for="arrivalTime">Heure de retour</label>
-		<input type="time" id="arrivalTime" name="arrivalTime"/> 
-		<br/>
+		<input type="text" id="arrivalTime" name="arrivalTime"/> 
+		<br/> 
 		<label for="participantMax">Nombre de places maximales</label>
 		<input type="number" placeholder="Nombre de places" id="participantMax" name="participantMax"/>
 		<br/>
