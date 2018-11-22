@@ -9,9 +9,14 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
+		
+<link rel="stylesheet" href="css/style.css" type="text/css"/>		
 <title>Ajouter un lieu</title>
 </head>
 <body>
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
 
 	<h2>Ajouter un nouveau lieu</h2>
 	
