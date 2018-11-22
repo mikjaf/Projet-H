@@ -12,8 +12,8 @@ public class Transport extends IdObject {
 
 	private Integer participantMax;
 	private String transportation;
-	private Date departureTime;
-	private Date arrivalTime;
+	private String departureTime;
+	private String arrivalTime;
 	private Integer seatsTaken;
 	
 	@ManyToMany(mappedBy="transportsList")
@@ -47,22 +47,22 @@ public class Transport extends IdObject {
 	}
 
 
-	public Date getDepartureTime() {
+	public String getDepartureTime() {
 		return departureTime;
 	}
 
 
-	public void setDepartureTime(Date departureTime) {
+	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
 
 
-	public Date getArrivalTime() {
+	public String getArrivalTime() {
 		return arrivalTime;
 	}
 
 
-	public void setArrivalTime(Date arrivalTime) {
+	public void setArrivalTime(String arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
 

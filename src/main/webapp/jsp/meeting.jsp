@@ -12,11 +12,14 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
-		
+<link rel="stylesheet" href="css/style.css" type="text/css"/>		
 <title>Réunion</title>
 </head>
 <body>
-
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
+	
 	<h1>Réunion : ${ meeting.topic }</h1>
 	
 	<div id="meetingPlace">

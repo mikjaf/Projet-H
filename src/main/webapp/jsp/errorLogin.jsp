@@ -10,10 +10,13 @@
 			+ request.getServerPort()
 			+ request.getContextPath() + "/"
 			%>" />
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 
 <body>
-
+<jsp:include page="header.jsp" />
+<br>
+<br>
 <h2>Les identifiants sont incorrects. Veuillez ré-essayer !</h2>
 
 <%@ include file="login.jsp" %>

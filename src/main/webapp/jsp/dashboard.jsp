@@ -10,18 +10,20 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+
 </head>
 
 <body>
-
-	<h1>Dashboard</h1>
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
 	
+	<h1>Dashboard</h1>
+
 	<div>
 		<a href="event/createEvent">Ajouter un nouvel élément</a>
 	</div>
-	
-	
-	
-	
+
 </body>
 </html>

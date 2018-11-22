@@ -12,11 +12,15 @@
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
-		
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
 <title>Liste des matchs</title>
 </head>
 
 <body>
+	<jsp:include page="header.jsp" />
+	<br>
+	<br>
+	
 	<h1>Liste des matchs</h1>
 	
 	<table>

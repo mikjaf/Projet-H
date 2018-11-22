@@ -77,12 +77,6 @@ public class CreateEventController {
 		model.addAttribute("workshopsList", workshopDao.findAll());
 		return "workshopsList";
 	}
-	
-	@GetMapping("/workshopsList")
-	public String showWorkshopsList(Model model) {
-		model.addAttribute("workshopsList", workshopDao.findAll());
-		return "workshopsList";
-	}
 
 	@GetMapping("/workshop/{id}")
 	public String showWorkshop(@PathVariable("id") Long id, Model model) {
@@ -91,6 +85,11 @@ public class CreateEventController {
 		return "workshop";
 	}
 
+	@GetMapping("/workshopsList")
+	public String showWorkshopsList(Model model) {
+		model.addAttribute("workshopsList", workshopDao.findAll());
+		return "workshopsList";
+	}
 	////////////////////////////////////////////////////////////
 
 	// pour arriver sur le formulaire CreateMeeting
@@ -124,18 +123,18 @@ public class CreateEventController {
 		
 		return "meetingsList";
 	}
-
-	@GetMapping("/meetingsList")
-	public String showMeetingsList(Model model) {
-		model.addAttribute("meetingsList", meetingDao.findAll());
-		return "meetingsList";
-	}
 	
 	@GetMapping("/meeting/{id}")
 	public String showMeeting(@PathVariable("id") Long id, Model model) {
 		Meeting meeting = meetingDao.findById(id);
 		model.addAttribute("meeting", meeting);
 		return "meeting";
+	}
+	
+	@GetMapping("/meetingsList")
+	public String showMeetingsList(Model model) {
+		model.addAttribute("meetingsList", meetingDao.findAll());
+		return "meetingsList";
 	}
 
 	////////////////////////////////////////////////////////////
@@ -158,9 +157,9 @@ public class CreateEventController {
 			@RequestParam("homeAway") String homeAway,
 			@RequestParam("transportation") String transportation,
 //			@DateTimeFormat(iso = ISO.TIME)
-//			@RequestParam("departureTime") Date departureTime,
+			@RequestParam("departureTime") String departureTime,
 //			@DateTimeFormat(iso = ISO.TIME)
-//			@RequestParam("arrivalTime") Date arrivalTime,
+			@RequestParam("arrivalTime") String arrivalTime,
 			@RequestParam("participantMax") Integer participantMax
 			) {
 			Location location = locationDao.findById(locationId);
@@ -175,12 +174,10 @@ public class CreateEventController {
 
 			Transport transport = new Transport ();
 			transport.setTransportation(transportation);
-//			transport.setDepartureTime(departureTime);
-//			transport.setArrivalTime(arrivalTime);
-			transport.setDepartureTime(new Date());
-			transport.setArrivalTime(new Date());
+			transport.setDepartureTime(departureTime);
+			transport.setArrivalTime(arrivalTime);
 			transport.setParticipantMax(participantMax);
-			
+			System.out.println(competition);
 				
 		match = matchDao.createOrUpdate(match);
 		transport = transportDao.createOrUpdate(transport);
@@ -190,12 +187,6 @@ public class CreateEventController {
 		return "matchsList";
 	}
 
-	@GetMapping("/matchsList")
-	public String showMatchsList(Model model) {
-		model.addAttribute("matchsList", matchDao.findAll());
-		return "matchsList";
-	}
-	
 	@GetMapping("/match/{id}")
 	public String showMatch(@PathVariable("id") Long id, Model model) {
 		Match match = matchDao.findById(id);
@@ -203,6 +194,11 @@ public class CreateEventController {
 		return "match";
 	}
 	
+	@GetMapping("/matchsList")
+	public String showMatchsList(Model model) {
+		model.addAttribute("matchsList", matchDao.findAll());
+		return "matchsList";
+	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -213,43 +209,5 @@ public class CreateEventController {
 	public String showCreateEvent() {
 		return "createEventForm";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
