@@ -17,7 +17,7 @@
 	<h1>Match : ${ match.title }</h1>
 	
 	<div id="matchLocationName">
-			${ match.location }
+		<a href="location/${ match.location.id }">${ match.location.locationName }</a>
 	</div>
 	<div id="matchDate">
 			${ match.date }
@@ -40,19 +40,19 @@
 	<h2>Déplacement : ${ match.title }</h2>
 	
 	<div id="transportation">
-			${ match.transportation }
+			${ match.transport.transportation }
 	</div>
 	<div id="departureTime">
-			${ match.departureTime }
+			${ match.transport.departureTime }
 	</div>
 	<div id="arrivalTime"> 
-			${ match.arrivalTime }
+			${ match.transport.arrivalTime }
 	</div>
 	<div id=maxNb>
-			${ match.participantMax }
+			${ match.transport.participantMax }
 	</div>
 	<div id="availableSeats">
-			<%-- ${ match.seatstaken }  --%>
+			<%-- ${ match.transport.seatstaken }  --%>
 	</div>
 	
 	

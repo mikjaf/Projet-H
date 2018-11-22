@@ -2,16 +2,18 @@ package fr.projet.beans;
 
 import java.util.Date;
 
-import javax.persistence.Embedded;
+import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class Event extends IdObject {
 	
-	@Embedded
-	private Location location;
+	
 	private Date date;
 	private Integer participantNumber;
 	private String description;
+	
+	@ManyToOne
+	private Location location;
 	
 	
 	public Event() {

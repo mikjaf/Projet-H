@@ -1,17 +1,18 @@
 package fr.projet.beans;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 
 
-@Embeddable
-public class Location {
+@Entity
+public class Location extends IdObject {
 	
 	private String locationName;
-	private Integer streetNumber;
+	private String streetNumber;
 	private String street;
 	private String postCode;
 	private String city;
 	private String country;
+	
 	
 	
 	public Location() {
@@ -29,12 +30,12 @@ public class Location {
 	}
 
 
-	public Integer getStreetNumber() {
+	public String getStreetNumber() {
 		return streetNumber;
 	}
 
 
-	public void setStreetNumber(Integer streetNumber) {
+	public void setStreetNumber(String streetNumber) {
 		this.streetNumber = streetNumber;
 	}
 

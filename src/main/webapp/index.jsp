@@ -17,7 +17,7 @@
 	<br/>
 	
 	<h2>S'inscrire</h2>
-	<form action="addSubscriber" method="post" class="registerForm">
+	<form action="addSubscriber" method="post">
 		<div class="registerForm">
 			<label for="lastname">Nom </label>
 			<input type="text" placeholder="Nom" name="lastName" id="lastname" required>

@@ -17,7 +17,7 @@
 	<h1>Atelier : ${ workshop.theme }</h1>
 	
 	<div id="workshopPlace">
-			${ workshop.location }
+		<a href="location/${ workshop.location.id }">${ workshop.location.locationName }</a>
 	</div>
 	<div id="workshopDate">
 			${ workshop.date }

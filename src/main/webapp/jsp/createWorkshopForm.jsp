@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +25,14 @@
 		<label for="date">Date</label>
 		<input type="date" id="date" name="date"/>
 		<br/>
-		<!-- <label for="location">Lieu</label> -->
+		<label for="location">Lieu</label>
+		<select name="location">
+			<option value="">--Choisissez un lieu--</option>
+			<core:forEach var="location" items="${ locationList }">
+   			<option value="${ location.id }">${ location.locationName }</option>
+			</core:forEach>
+		</select>
+		<br/>
 		<label for="equipment">Matériel</label>
 		<input type="text" placeholder="matériel" id="equipment" name="equipment" required/>
 		<br/>
@@ -31,7 +41,8 @@
 		<br/>
 		<!-- <label for="participantNumber">Nombre de participants</label> -->
 		<input type="submit" value="Ajouter" />
-	
 	</form>
+	
+	
 </body>
 </html>

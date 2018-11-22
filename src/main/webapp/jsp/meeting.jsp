@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,20 +20,22 @@
 	<h1>Réunion : ${ meeting.topic }</h1>
 	
 	<div id="meetingPlace">
-			${ meeting.location }
+		<p><b>Lieu : </b>
+			<a href="location/${ meeting.location.id }">${ meeting.location.locationName }</a> 
+		</p>
 	</div>
 	<div id="meetingDate">
-			${ meeting.date }
+		<p><b>Date : </b>${ meeting.date }</p>
 	</div>
 	<div id="durationTime">
-			${ meeting.durationTime }
+		<p><b>Durée : </b>${ meeting.durationTime }</p>
 	</div>
 	<div id="meetingParticipantsNb">
-			<input type="submit" value="Je participe" />
-			<%-- ${ meeting.participantNumber } --%>
+		<p><b>Nombre de participants : </b>${ meeting.participantNumber }
+		<input type="submit" value="Je participe" /></p>
 	</div>
 	<div id="meetingDescription">
-			${ meeting.description }
+		<p><b>Description : </b>${ meeting.description }</p>
 	</div>
 </body>
 </html>

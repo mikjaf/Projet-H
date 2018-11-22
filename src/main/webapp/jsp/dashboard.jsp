@@ -14,9 +14,14 @@
 
 <body>
 
-<h1>Dashboard</h1>
-
-
-
+	<h1>Dashboard</h1>
+	
+	<div>
+		<a href="event/createEvent">Ajouter un nouvel élément</a>
+	</div>
+	
+	
+	
+	
 </body>
 </html>

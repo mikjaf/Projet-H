@@ -23,7 +23,8 @@
 	<bean id="meetingDao" class="fr.projet.dao.MeetingDao"></bean>
 	<bean id="subscriberDao" class="fr.projet.dao.SubscriberDao"></bean>
 	<bean id="matchDao" class="fr.projet.dao.MatchDao"></bean>
-	<bean id="transportDao" class="fr.projet.dao.TransportDao"></bean>    
+	<bean id="transportDao" class="fr.projet.dao.TransportDao"></bean>
+	<bean id="locationDao" class="fr.projet.dao.LocationDao"></bean>    
 
 
 	<!-- **************************************************************************************** -->
