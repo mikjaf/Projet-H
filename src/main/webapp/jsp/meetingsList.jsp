@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
+     <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
     
 <!DOCTYPE html>
 <html>
@@ -20,6 +21,7 @@
 	<jsp:include page="header.jsp" />
 	<br>
 	<br>
+	<%-- <fmt:formatDate value="${ meeting.date }" pattern="dd MMMM yyyy" /> --%>
 	
 	<h1>Liste des réunions</h1>
 	

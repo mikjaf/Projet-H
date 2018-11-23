@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import fr.projet.beans.Competition;
+import fr.projet.beans.Event;
 import fr.projet.beans.Location;
 import fr.projet.beans.Match;
 import fr.projet.beans.Meeting;
@@ -45,6 +46,10 @@ public class CreateEventController {
 	@Autowired
 	@Qualifier("locationDao")
 	private DaoInterface<Location> locationDao;
+	
+	@Autowired
+	@Qualifier("eventDao")
+	private DaoInterface<Event> eventDao;
 	
 
 	// pour arriver sur le formulaire CreateWorkshop
@@ -156,22 +161,24 @@ public class CreateEventController {
 			@RequestParam("description") String description,
 			@RequestParam("homeAway") String homeAway,
 			@RequestParam("transportation") String transportation,
-//			@DateTimeFormat(iso = ISO.TIME)
 			@RequestParam("departureTime") String departureTime,
-//			@DateTimeFormat(iso = ISO.TIME)
 			@RequestParam("arrivalTime") String arrivalTime,
-			@RequestParam("participantMax") Integer participantMax
-			) {
-			Location location = locationDao.findById(locationId);
+			@RequestParam("participantMax") Integer participantMax) {
+		
 		
 			Match match = new Match();
 			match.setTitle(title);
 			match.setDate(date);
-			match.setLocation(location);
+			
 			match.setCompetitionType(competition);
 			match.setDescription(description);
 			match.setHomeAway(homeAway.equals("Extérieur"));
 
+			if(locationId != null) {
+				Location location = locationDao.findById(locationId);
+				match.setLocation(location);
+			}
+			
 			Transport transport = new Transport ();
 			transport.setTransportation(transportation);
 			transport.setDepartureTime(departureTime);
@@ -199,6 +206,24 @@ public class CreateEventController {
 		model.addAttribute("matchsList", matchDao.findAll());
 		return "matchsList";
 	}
+	
+	////////////////////////////////////////////////////////////
+	// Dashboard
+
+	@GetMapping("/{id}")
+	public String showEvent(@PathVariable("id") Long id, Model model) {
+		Event event = eventDao.findById(id);
+		model.addAttribute("event", event);
+		return "event";
+	}
+	
+	@GetMapping("/dashboard")
+	public String showDashboard(Model model) {
+		model.addAttribute("dashboard", eventDao.findAll());
+		return "dashboard";
+	}
+	
+	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

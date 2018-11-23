@@ -20,9 +20,7 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-	<jsp:include page="jsp/header.jsp"/>
-	</br>
-	</br>
+	
 	<h1>Accueil</h1>
 
 	<h2>Se connecter</h2>
