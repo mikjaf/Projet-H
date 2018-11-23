@@ -1,6 +1,6 @@
-
-<p>PROJET H - L'agenda des supporters</p>
-		
+<div>
+	<p>PROJET H - L'agenda des supporters</p>
+</div>	
 <div id=header>
 	<ul>
 		<li><a href="event/workshopsList">Liste des ateliers</a></li>	

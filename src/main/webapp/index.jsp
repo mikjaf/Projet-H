@@ -3,63 +3,53 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
-<%@taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Projet H</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
 	<base href="<%=request.getScheme() + "://"
 		+ request.getServerName() + ":"
 		+ request.getServerPort()
 		+ request.getContextPath() + "/"
 		%>" />
 		
-		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		
+	<title>Projet H</title>
 </head>
 <body>
-	<jsp:include page="jsp/header.jsp"/>
-	</br>
-	</br>
-	<h1>Accueil</h1>
 
-	<h2>Se connecter</h2>
+	<jsp:include page="jsp/header.jsp"/>
 	
-	<jsp:include page="jsp/login.jsp"/>
+	<div id="titreIndex">
+		<h1>Accueil</h1>
+	</div>
 	
-	<br/>
+	<div id="formContainer">
+		<div class="formDiv">
+			<jsp:include page="jsp/login.jsp"/>
+		</div>
+		<div class="formDiv">
+			<jsp:include page="jsp/registerForm.jsp"/>
+		</div>
+	</div>
 	
-	<h2>S'inscrire</h2>
-	<form action="addSubscriber" method="post">
-		<div class="registerForm">
-			<label for="lastname">Nom </label>
-			<input type="text" placeholder="Nom" name="lastName" id="lastname" required>
-		</div>
-		<div class="registerForm">
-			<label for="firstname">Prenom </label>
-			<input type="text" placeholder="Prénom" name="firstName" id="firstname" required>
-		</div>
-		<div class="registerForm">
-			<label for="email">E-mail </label>
-			<input type="email" placeholder="E-mail" name="email" id="email" required>
-		</div>
-		<div class="registerForm">
-			<label for="phone">Telephone </label>
-			<input type="tel" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" placeholder="Téléphone" name="phone" id="phone" required>
-		</div>
-		<div class="registerForm">
-			<label for="password">Mot de passe </label>
-			<input type="password" placeholder="Mot de passe" name="password" id="password" required>
-		</div>
-		<!-- <div class="registerForm">
-			<label for="confirm_password">Confirmer mot de passe </label>
-			<input type="password" placeholder="Confirmer mot de passe" name="confirm_password" id="confirm_password" required>
-		</div> -->
-		<div class="registerForm">
-    		<input type="submit" value="Connexion">
-  		</div>
-	</form>
+	
+	
+	
+	
+	
+	<script type="text/javascript" src="js/script.js"></script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
 </body>
 </html>

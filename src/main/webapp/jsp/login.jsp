@@ -1,32 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<base href="<%=request.getScheme() + "://"
-		+ request.getServerName() + ":"
-		+ request.getServerPort()
-		+ request.getContextPath() + "/"
-		%>" />
-</head>
-<body>
-
-
-<form action="connect" method="post" class="loginnForm">
-		<div class="loginnForm">
+<div id="loginDiv">
+	<form id="loginForm" action="connect" method="post">
+		<h2>Se connecter</h2>
+		<div class="form-group">
 			<label for="email">E-mail : </label>
-			<input type="email" name="email" id="email" required>
+			<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Entrez votre e-mail" required>
 		</div>
-		<div class="loginnForm">
+		<div class="form-group">
 			<label for="password">Mot de passe : </label>
-			<input type="password" name="password" id="password" required>
+			<input type="password" name="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
 		</div>
-		<div class="loginnForm">
-    		<input type="submit" value="Connexion">
-  		</div>
+		<button type="submit" class="btn btn-primary">Connexion</button>
 	</form>
-
-</body>
-</html>
+</div>

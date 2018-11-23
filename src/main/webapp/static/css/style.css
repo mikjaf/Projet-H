@@ -1,0 +1,79 @@
+@charset "ISO-8859-1";
+
+#header{ 
+    width: 100%;
+ } 
+    
+div > ul > li{
+	float: left;
+}
+ 
+div li{
+    list-style-type: none;
+    text-align: center
+}
+    
+div > ul > li a{
+	width: 150px;
+	padding: 5px;
+	display: block;
+	text-decoration: none;
+}
+
+/* Index */
+
+#titreIndex{
+	margin-top: 50px;
+}
+
+
+/* Formulaire de connexion */ 
+
+#loginForm{
+    width: 300px;
+    height: 310px;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 3%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/* #loginDiv{
+    display: flex;
+    justify-content: space-around;
+    margint-left: 10px;
+} */
+/* #loginDiv label{
+    margin: 10px 0 0 0;
+} */
+
+/* Formulaire d'inscription */
+
+#registerForm{
+    width: 300px;
+    height: 600px;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 3%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/* #registernDiv{
+    display: flex;
+    justify-content: space-around;
+    margint-left: 10px;
+} */
+/* #registerDiv label{
+    margin: 10px 0 0 0;
+} */
+
+#formContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.formDiv{
+	
+}
