@@ -13,7 +13,7 @@
 	
 	<mvc:default-servlet-handler/>
 	<mvc:resources location="/static/css/" mapping="/css/**"></mvc:resources>
-	
+
 	<context:component-scan base-package="fr.projet"/>
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -26,7 +26,8 @@
 	<bean id="subscriberDao" class="fr.projet.dao.SubscriberDao"></bean>
 	<bean id="matchDao" class="fr.projet.dao.MatchDao"></bean>
 	<bean id="transportDao" class="fr.projet.dao.TransportDao"></bean>
-	<bean id="locationDao" class="fr.projet.dao.LocationDao"></bean>    
+	<bean id="locationDao" class="fr.projet.dao.LocationDao"></bean>  
+	<bean id="eventDao" class="fr.projet.dao.EventDao"></bean>  
 
 
 	<!-- **************************************************************************************** -->

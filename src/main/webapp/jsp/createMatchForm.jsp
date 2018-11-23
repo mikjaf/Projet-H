@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
     
 <!DOCTYPE html>
 <html>
@@ -20,6 +21,7 @@
 	<jsp:include page="header.jsp" />
 	<br>
 	<br>
+	
 	
 	<h1>Ajouter un match</h1>
 	
@@ -66,10 +68,10 @@
 		<input type="text" placeholder="transport" id="transportation" name="transportation" />
 		<br/>
 		<label for="departureTime">Heure de départ</label>
-		<input type="text" id="departureTime" name="departureTime">
+		<input type="time" id="departureTime" name="departureTime">
 		<br/>
 		<label for="arrivalTime">Heure de retour</label>
-		<input type="text" id="arrivalTime" name="arrivalTime"/> 
+		<input type="time" id="arrivalTime" name="arrivalTime"/> 
 		<br/> 
 		<label for="participantMax">Nombre de places maximales</label>
 		<input type="number" placeholder="Nombre de places" id="participantMax" name="participantMax"/>
