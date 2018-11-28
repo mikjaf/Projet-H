@@ -1,25 +1,67 @@
 @charset "ISO-8859-1";
-
+/* header */
 #header{ 
-    width: 100%;
+    background-color: #800080;
+    font-size: 1.2em;
+    color: #ffff11;
+    display: flex;
  } 
-    
-div > ul > li{
-	float: left;
-}
- 
-div li{
-    list-style-type: none;
-    text-align: center
-}
-    
-div > ul > li a{
-	width: 150px;
-	padding: 5px;
-	display: block;
-	text-decoration: none;
+
+#projectTitle{
+	padding-left:10px;
+}  
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+  background: #800080;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color:  #ffff11;
+}
+
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
 /* Index */
 
 #titreIndex{
@@ -77,3 +119,27 @@ div > ul > li a{
 .formDiv{
 	
 }
+
+/* h1 */
+h1 {
+	color: #800080;
+}
+
+h2 {
+	color: #970097;
+}
+
+/* .button{
+	width: 100px;
+	padding: 7 10 7 10px; 
+	background:#800080;
+	color:#ffff11; 
+	text-decoration: none; 
+	border-radius: 15%;
+} */
+
+/* listes d'événements  */
+.eventsLists {
+	margin: 50 px 0 0 0;
+} 
+

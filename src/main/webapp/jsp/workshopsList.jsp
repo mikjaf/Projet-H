@@ -28,7 +28,7 @@
 	
 	
 
-	<table>
+	<table class=eventsLists>
 		<tr>
 			<th>Thème de l'atelier</th>
 			<th>Date</th>

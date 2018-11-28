@@ -23,14 +23,17 @@
 	
 	<div>
 		<h2>Mes ateliers</h2>
+		<!-- montrer la liste des ateliers liés à l'utilisateur -->
 	</div>
 	
 	<div>
 		<h2>Mes réunions</h2>
+		<!-- montrer la liste des réunions liés à l'utilisateur -->
 	</div>
 	
 	<div>
 		<h2>Mes matchs</h2>
+		<!-- montrer la liste des matchs liés à l'utilisateur -->
 	</div>
 </body>
 </html>
