@@ -38,8 +38,8 @@
 		</tr>
 		<core:forEach var="event" items="${ eventsList }">
 		<tr>
-			<td>${ event.type }</td>
-			<td><a href="event/${ event.id }">${ event.title }</a></td>
+			<td>${ event.eventType }</td>
+			<td><a href="event/${ event.id }">${ workshop.theme }</a></td>
 			<td>${ event.date }</td>
 		</tr>
 		</core:forEach>

@@ -34,6 +34,8 @@ public class RegisterController {
 
 		subscriber = subscriberDao.createOrUpdate(subscriber);
 		
+//		model.addAttribute("firstName", subscriberDao.findByFirstName(firstName));
+		
 		return "registerConfirm";
 	}
 	

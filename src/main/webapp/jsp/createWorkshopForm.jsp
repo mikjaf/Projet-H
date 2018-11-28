@@ -28,6 +28,13 @@
 		<label for="topic">Thème</label>
 		<input type="text" placeholder="thème" id="topic" name="theme" required/>
 		<br/>
+		<label for="eventType">Type : </label>
+		<select name="eventType" id="eventType">
+			<option value="Atelier">Atelier</option>
+			<option value="Reunion">Réunion</option>
+			<option value="Match">Match</option>		
+		</select>
+		<br/>
 		<label for="date">Date</label>
 		<input type="date" id="date" name="date"/>
 		<br/>

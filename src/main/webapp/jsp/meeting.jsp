@@ -20,7 +20,7 @@
 	<br>
 	<br>
 	
-	<h1>Réunion : ${ meeting.topic }</h1>
+	<h1>${ meeting.eventType } : ${ meeting.topic }</h1>
 	
 	<div id="meetingPlace">
 		<p><b>Lieu : </b>

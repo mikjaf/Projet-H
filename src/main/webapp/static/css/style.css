@@ -58,14 +58,6 @@ div > ul > li a{
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-/* #registernDiv{
-    display: flex;
-    justify-content: space-around;
-    margint-left: 10px;
-} */
-/* #registerDiv label{
-    margin: 10px 0 0 0;
-} */
 
 #formContainer{
 	display: flex;
@@ -74,6 +66,122 @@ div > ul > li a{
 	align-items: flex-start;
 }
 
-.formDiv{
-	
+
+
+/* Formulaire de création de lieu */
+
+#locationForm{
+    width: 500px;
+    height: 680px;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 3%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
+
+#locationFormDiv{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.titleForm{
+	margin-bottom: 25px;
+}
+
+
+/* Formulaire de création de match */
+
+#matchFormContainer{
+	display: flex;
+	justify-content: center;
+}
+
+#matchForm{
+    width: 1200px;
+    height: 700px;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 3%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#matchFormDiv{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+#matchFormDiv1{
+	width: 500px;
+	margin: 20px;
+}
+
+#matchFormDiv2{
+	width: 500px;
+	margin: 20px;
+}
+
+#condition{
+	margin-top: 25px;
+}
+
+/* Formulaire de création de réunion */
+
+#meetingFormContainer{
+	display: flex;
+	justify-content: center;
+}
+
+#meetingForm{
+    width: 800px;
+    height: 700px;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 3%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

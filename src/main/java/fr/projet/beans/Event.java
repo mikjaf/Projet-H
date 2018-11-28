@@ -2,16 +2,19 @@ package fr.projet.beans;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.MappedSuperclass;
-@MappedSuperclass
+
+@Entity
 public class Event extends IdObject {
 	
 	
 	private Date date;
 	private Integer participantNumber;
 	private String description;
+	private EventType eventType;
 	
+
 	@ManyToOne
 	private Location location;
 	
@@ -52,7 +55,12 @@ public class Event extends IdObject {
 		this.description = description;
 	}
 
+	public EventType getEventType() {
+		return eventType;
+	}
 
-	
+	public void setEventType(EventType eventType) {
+		this.eventType = eventType;
+	}
 	
 }

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import fr.projet.beans.Competition;
 import fr.projet.beans.Event;
+import fr.projet.beans.EventType;
 import fr.projet.beans.Location;
 import fr.projet.beans.Match;
 import fr.projet.beans.Meeting;
@@ -62,6 +63,7 @@ public class CreateEventController {
 	@PostMapping("/createWorkshop")
 	public String addWorkshop(Model model, 
 			@RequestParam("theme") String theme,
+			@RequestParam("eventType") EventType eventType,
 			@DateTimeFormat(iso = ISO.DATE) 
 			@RequestParam("date") Date date,
 			@RequestParam("location") Long locationId,
@@ -72,6 +74,7 @@ public class CreateEventController {
 		
 		Workshop workshop = new Workshop();
 		workshop.setTheme(theme);
+		workshop.setEventType(eventType);
 		workshop.setDate(date);
 		workshop.setLocation(location);
 		workshop.setEquipment(equipment);
@@ -107,6 +110,7 @@ public class CreateEventController {
 	@PostMapping("/createMeeting")
 	public String addMeeting(Model model, 
 			@RequestParam("topic") String topic,
+			@RequestParam("eventType") EventType eventType,
 			@DateTimeFormat(iso = ISO.DATE) 
 			@RequestParam("date") Date date,
 			@RequestParam("location") Long locationId,
@@ -117,6 +121,7 @@ public class CreateEventController {
 		
 		Meeting meeting = new Meeting();
 		meeting.setTopic(topic);
+		meeting.setEventType(eventType);
 		meeting.setDate(date);
 		meeting.setLocation(location);
 		meeting.setDurationTime(durationTime);
@@ -154,6 +159,7 @@ public class CreateEventController {
 	@PostMapping("/createMatch")
 	public String addMatch(Model model, 
 			@RequestParam("title") String title,
+			@RequestParam("eventType") EventType eventType,
 			@DateTimeFormat(iso = ISO.DATE) 
 			@RequestParam("date") Date date,
 			@RequestParam("location") Long locationId,
@@ -168,8 +174,8 @@ public class CreateEventController {
 		
 			Match match = new Match();
 			match.setTitle(title);
+			match.setEventType(eventType);
 			match.setDate(date);
-			
 			match.setCompetitionType(competition);
 			match.setDescription(description);
 			match.setHomeAway(homeAway.equals("Extérieur"));
@@ -219,7 +225,7 @@ public class CreateEventController {
 	
 	@GetMapping("/dashboard")
 	public String showDashboard(Model model) {
-		model.addAttribute("dashboard", eventDao.findAll());
+		model.addAttribute("eventsList", eventDao.findAll());
 		return "dashboard";
 	}
 	

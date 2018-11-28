@@ -31,7 +31,7 @@
 	
 	<h1>Confirmation d'inscription</h1>
 	
-	<p>Bravo <i>Prénom</i>, vous êtes inscrit !</p>
+	<p>Bravo ${ firstName }, vous êtes inscrit !</p>
 	
 	<h2>Connectez-vous dès maintenant :</h2>
 	

@@ -68,6 +68,19 @@ public class SubscriberDao implements SubscriberInterfaceDao {
 		return null;
 	}
 	
+	public Subscriber findByFirstName(String firstName) {
+
+		Session session = sessionFactory.getCurrentSession();
+		TypedQuery<Subscriber> query = session.createQuery("SELECT entity FROM Subscriber entity WHERE entity.firstName='" + firstName + "'", Subscriber.class);
+		
+		List<Subscriber> subscriberList = query.getResultList();
+		if (subscriberList.size() == 1) {
+			return subscriberList.get(0);
+		}
+		
+		return null;
+	}
+	
 	
 
 }

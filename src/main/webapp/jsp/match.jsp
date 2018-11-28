@@ -18,7 +18,7 @@
 	<br>
 	<br>
 	
-	<h1>Match : ${ match.title }</h1>
+	<h1>${ match.eventType } : ${ match.title }</h1>
 	
 	<div id="matchLocationName">
 		<a href="location/${ match.location.id }">${ match.location.locationName }</a>
@@ -29,6 +29,9 @@
 	<div id="matchParticipantsNb">
 			<input type="submit" value="Je participe" />
 			${ match.participantNumber }
+	</div>
+	<div id="competitionType">
+			${ match.competitionType } 
 	</div>
 	<div id="homeAway">
 			${ match.homeAway } 
