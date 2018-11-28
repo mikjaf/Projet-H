@@ -25,16 +25,20 @@
 	
 	<h1>Liste des matchs</h1>
 	
-	<table>
+	<table class="table table-striped">
+	<thead>
 		<tr>
-			<th>Nom du match</th>
-			<th>Date</th>
+			<th scope="col">Nom du match</th>
+			<th scope="col">Date</th>
 		</tr>
+		</thead>
 		<core:forEach var="match" items="${ matchsList }">
+		<tbody>
 		<tr>
 			<td><a href="event/match/${ match.id }">${ match.title }</a></td>
 			<td>${ match.date }</td>
 		</tr>
+		</tbody>
 		</core:forEach>
 	</table>
 	

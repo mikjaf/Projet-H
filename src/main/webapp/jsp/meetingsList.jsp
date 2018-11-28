@@ -25,7 +25,7 @@
 	
 	<h1>Liste des réunions</h1>
 	
-	<table>
+	<table class=eventsLists>
 		<tr>
 			<th>Sujet de la réunion</th>
 			<th>Date</th>

@@ -25,7 +25,7 @@
 	
 	<h1>Dashboard</h1>
 
-	<div>
+	<div class=button>
 		<a href="event/createEvent">Ajouter un nouvel élément</a>
 	</div>
 
