@@ -9,7 +9,6 @@ import javax.persistence.ManyToMany;
 @Entity
 public class Workshop extends Event {
 
-	private String theme;
 	private String equipment;
 	
 	@ManyToMany(mappedBy="workshopsList")
@@ -17,16 +16,6 @@ public class Workshop extends Event {
 	
 	public Workshop() {
 		super();
-	}
-
-
-	public String getTheme() {
-		return theme;
-	}
-
-
-	public void setTheme(String theme) {
-		this.theme = theme;
 	}
 
 

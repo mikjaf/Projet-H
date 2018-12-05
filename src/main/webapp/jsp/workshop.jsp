@@ -19,7 +19,7 @@
 	<br>
 	<br>
 	
-	<h1>${ workshop.eventType } : ${ workshop.theme }</h1>
+	<h1>${ workshop.eventType } : ${ workshop.title }</h1>
 	
 	<div id="workshopPlace">
 		<a href="location/${ workshop.location.id }">${ workshop.location.locationName }</a>

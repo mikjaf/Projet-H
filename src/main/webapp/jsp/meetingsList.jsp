@@ -32,7 +32,7 @@
 		</tr>
 		<core:forEach var="meeting" items="${ meetingsList }">
 		<tr>
-			<td><a href="event/meeting/${ meeting.id }">${ meeting.topic }</a></td>
+			<td><a href="event/meeting/${ meeting.id }">${ meeting.title }</a></td>
 			<td>${ meeting.date }<td>
 		</core:forEach>
 	</table>

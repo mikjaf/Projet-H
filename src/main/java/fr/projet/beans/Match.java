@@ -13,7 +13,6 @@ import javax.persistence.Table;
 public class Match extends Event {
 
 	private Competition competitionType;
-	private String title;
 	private Boolean homeAway;
 	
 	@ManyToMany(mappedBy="matchsList")
@@ -35,16 +34,6 @@ public class Match extends Event {
 
 	public void setCompetitionType(Competition competitionType) {
 		this.competitionType = competitionType;
-	}
-
-
-	public String getTitle() {
-		return title;
-	}
-
-
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 

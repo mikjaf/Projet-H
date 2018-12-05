@@ -62,7 +62,7 @@ public class CreateEventController {
 
 	@PostMapping("/createWorkshop")
 	public String addWorkshop(Model model, 
-			@RequestParam("theme") String theme,
+			@RequestParam("title") String title,
 			@RequestParam("eventType") EventType eventType,
 			@DateTimeFormat(iso = ISO.DATE) 
 			@RequestParam("date") Date date,
@@ -73,7 +73,7 @@ public class CreateEventController {
 		Location location = locationDao.findById(locationId);
 		
 		Workshop workshop = new Workshop();
-		workshop.setTheme(theme);
+		workshop.setTitle(title);
 		workshop.setEventType(eventType);
 		workshop.setDate(date);
 		workshop.setLocation(location);
@@ -109,7 +109,7 @@ public class CreateEventController {
 
 	@PostMapping("/createMeeting")
 	public String addMeeting(Model model, 
-			@RequestParam("topic") String topic,
+			@RequestParam("title") String title,
 			@RequestParam("eventType") EventType eventType,
 			@DateTimeFormat(iso = ISO.DATE) 
 			@RequestParam("date") Date date,
@@ -120,7 +120,7 @@ public class CreateEventController {
 		Location location = locationDao.findById(locationId);
 		
 		Meeting meeting = new Meeting();
-		meeting.setTopic(topic);
+		meeting.setTitle(title);
 		meeting.setEventType(eventType);
 		meeting.setDate(date);
 		meeting.setLocation(location);

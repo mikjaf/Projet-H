@@ -35,8 +35,8 @@
 			<div id="matchFormDiv">
 				<div id="matchFormDiv1">
 					<div class="form-group">
-						<label for="topic">Titre</label>
-						<input type="text" class="form-control" placeholder="titre" id="topic" name="title" required/>
+						<label for="title">Titre</label>
+						<input type="text" class="form-control" placeholder="titre" id="title" name="title" required/>
 					</div>
 					<div class="form-group">
 						<label for="eventType">Type</label>
