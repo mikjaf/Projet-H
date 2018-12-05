@@ -37,14 +37,6 @@
 				<input type="text" class="form-control" placeholder="sujet" id="title" name="title" required/>
 			</div>
 			<div>
-				<label for="eventType">Type : </label>
-				<select name="eventType" id="eventType" class="form-control">
-					<option value="Atelier">Atelier</option>
-					<option value="Reunion">Réunion</option>
-					<option value="Match">Match</option>		
-				</select>
-			</div>
-			<div>
 				<label for="date">Date</label>
 				<input type="date" class="form-control" id="date" name="date"/>
 			</div>
@@ -66,6 +58,7 @@
 				<textarea type="text" class="form-control" placeholder="description" id="description" name="description" rows="3" required></textarea>
 			</div>
 			<button type="submit" class="btn btn-primary">Ajouter</button>
+			<input type="hidden" name ="eventType" value="Reunion">
 		</form>
 	</div>
 	

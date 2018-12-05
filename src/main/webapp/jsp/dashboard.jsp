@@ -32,8 +32,8 @@
 	
 	<table>
 		<tr>
-			<th>Titre</th>
 			<th>Type de l'événement</th>
+			<th>Titre</th>
 			<th>Date</th>
 		</tr>
 		<core:forEach var="event" items="${ eventsList }">
