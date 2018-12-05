@@ -33,7 +33,7 @@
 		<core:forEach var="meeting" items="${ meetingsList }">
 		<tr>
 			<td><a href="event/meeting/${ meeting.id }">${ meeting.title }</a></td>
-			<td>${ meeting.date }<td>
+			<td><fmt:formatDate value="${ meeting.date }" pattern="dd MMMM yyyy" /><td>
 		</core:forEach>
 	</table>
 		

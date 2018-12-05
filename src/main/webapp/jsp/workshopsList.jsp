@@ -22,7 +22,6 @@
 	<jsp:include page="header.jsp" />
 	<br>
 	<br>
-	<%-- <fmt:formatDate value="${ workshop.date }" pattern="dd MMMM yyyy" /> --%>
 	
 	<h1>Liste des ateliers</h1>
 	
@@ -36,7 +35,7 @@
 		<core:forEach var="workshop" items="${ workshopsList }">
 		<tr>
 			<td><a href="event/workshop/${ workshop.id }">${ workshop.title }</a></td>
-			<td>${ workshop.date }</td>
+			<td><fmt:formatDate value="${ workshop.date }" pattern="dd MMMM yyyy" /></td>
 		</tr>
 	</core:forEach>
 	

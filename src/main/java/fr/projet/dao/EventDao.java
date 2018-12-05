@@ -41,7 +41,7 @@ public class EventDao implements DaoInterface<Event>{
 	@Override
 	public List<Event> findAll() {
 		Session session = sessionFactory.getCurrentSession();
-		TypedQuery<Event> query = session.createQuery("SELECT entity FROM Event entity", Event.class);
+		TypedQuery<Event> query = session.createQuery("SELECT entity FROM Event entity ORDER BY date ASC", Event.class);
 		return query.getResultList();
 	}
 

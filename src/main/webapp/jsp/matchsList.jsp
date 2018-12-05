@@ -36,7 +36,7 @@
 		<tbody>
 		<tr>
 			<td><a href="event/match/${ match.id }">${ match.title }</a></td>
-			<td>${ match.date }</td>
+			<td><fmt:formatDate value="${ match.date }" pattern="dd MMMM yyyy" /></td>
 		</tr>
 		</tbody>
 		</core:forEach>

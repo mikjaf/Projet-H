@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
-     <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
     
 <!DOCTYPE html>
 <html>
@@ -38,9 +38,20 @@
 		</tr>
 		<core:forEach var="event" items="${ eventsList }">
 		<tr>
-			<td><a href="event/${ event.id }">${ event.title }</a></td>
+			<core:choose>
+				<core:when test="${ event.eventType == 'Atelier' }">
+					<td><a href="event/workshop/${ event.id }">${ event.title }</a></td>
+				</core:when>
+				<core:when test="${ event.eventType == 'Reunion' }">
+					<td><a href="event/meeting/${ event.id }">${ event.title }</a></td>
+				</core:when>
+				<core:when test="${ event.eventType == 'Match' }">
+					<td><a href="event/match/${ event.id }">${ event.title }</a></td>
+				</core:when>
+			</core:choose>
+			
 			<td>${ event.eventType }</td>
-			<td>${ event.date }</td>
+			<td><fmt:formatDate value="${ event.date }" pattern="EEEE dd MMMM" /></td>
 		</tr>
 		</core:forEach>
 	</table>
