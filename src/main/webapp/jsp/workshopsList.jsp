@@ -35,7 +35,7 @@
 		</tr>
 		<core:forEach var="workshop" items="${ workshopsList }">
 		<tr>
-			<td><a href="event/workshop/${ workshop.id }">${ workshop.theme }</a></td>
+			<td><a href="event/workshop/${ workshop.id }">${ workshop.title }</a></td>
 			<td>${ workshop.date }</td>
 		</tr>
 	</core:forEach>

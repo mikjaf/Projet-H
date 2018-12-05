@@ -33,8 +33,8 @@
 	<div id="meetingFormContainer">
 		<form id="meetingForm" action="event/createMeeting" method="post">
 			<div>
-				<label for="topic">Sujet</label>
-				<input type="text" class="form-control" placeholder="sujet" id="topic" name="topic" required/>
+				<label for="title">Sujet</label>
+				<input type="text" class="form-control" placeholder="sujet" id="title" name="title" required/>
 			</div>
 			<div>
 				<label for="eventType">Type : </label>

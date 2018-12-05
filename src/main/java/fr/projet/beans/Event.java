@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Event extends IdObject {
 	
-	
+	private String title;
 	private Date date;
 	private Integer participantNumber;
 	private String description;
@@ -61,6 +61,14 @@ public class Event extends IdObject {
 
 	public void setEventType(EventType eventType) {
 		this.eventType = eventType;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
 }

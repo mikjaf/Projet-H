@@ -9,7 +9,6 @@ import javax.persistence.ManyToMany;
 @Entity
 public class Meeting extends Event {
 
-	private String topic;
 	private String durationTime;
 	
 	@ManyToMany(mappedBy="meetingsList")
@@ -17,16 +16,6 @@ public class Meeting extends Event {
 	
 	public Meeting() {
 		super();
-	}
-
-
-	public String getTopic() {
-		return topic;
-	}
-
-
-	public void setTopic(String topic) {
-		this.topic = topic;
 	}
 
 
