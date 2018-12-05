@@ -10,7 +10,7 @@ import javax.persistence.ManyToMany;
 public class Meeting extends Event {
 
 	private String topic;
-	private Integer durationTime;
+	private String durationTime;
 	
 	@ManyToMany(mappedBy="meetingsList")
 	private List<Subscriber> subscribersList = new ArrayList<Subscriber>();
@@ -30,12 +30,12 @@ public class Meeting extends Event {
 	}
 
 
-	public Integer getDurationTime() {
+	public String getDurationTime() {
 		return durationTime;
 	}
 
 
-	public void setDurationTime(Integer durationTime) {
+	public void setDurationTime(String durationTime) {
 		this.durationTime = durationTime;
 	}
 
