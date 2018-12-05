@@ -114,7 +114,7 @@ public class CreateEventController {
 			@DateTimeFormat(iso = ISO.DATE) 
 			@RequestParam("date") Date date,
 			@RequestParam("location") Long locationId,
-			@RequestParam("durationTime") Integer durationTime, 
+			@RequestParam("durationTime") String durationTime, 
 			@RequestParam("description") String description) {
 
 		Location location = locationDao.findById(locationId);
