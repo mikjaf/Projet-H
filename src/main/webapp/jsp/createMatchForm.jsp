@@ -39,15 +39,6 @@
 						<input type="text" class="form-control" placeholder="titre" id="title" name="title" required/>
 					</div>
 					<div class="form-group">
-						<label for="eventType">Type</label>
-						<select name="eventType" id="eventType" class="form-control">
-							<option value="">--Choisissez un type d'évènement--</option>
-							<option value="Atelier">Atelier</option>
-							<option value="Reunion">Réunion</option>
-							<option value="Match">Match</option>		
-						</select>
-					</div>
-					<div class="form-group">
 						<label for="date">Date</label>
 						<input type="date" class="form-control" id="date" name="date"/>
 					</div>
@@ -74,6 +65,7 @@
 						<label for="description">Description</label>
 						<textarea type="text" class="form-control" placeholder="description" id="description" name="description" rows="3" required></textarea>
 					</div>
+					<input type="hidden" name ="eventType" value="Match">
 		        </div>
 	
 	
