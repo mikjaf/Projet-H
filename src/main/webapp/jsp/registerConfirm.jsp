@@ -25,18 +25,23 @@
 
 <body>
 
-	<jsp:include page="header.jsp" />
-	<br>
-	<br>
-	
-	<h1>Confirmation d'inscription</h1>
-	
-	<p>Bravo ${ firstName }, vous êtes inscrit !</p>
-	
-	<h2>Connectez-vous dès maintenant :</h2>
-	
-	<%@ include file="login.jsp" %>
-
+		<jsp:include page="header.jsp" />
+		
+		<div class="container1">
+		
+			<div>
+				<h1>Confirmation d'inscription</h1>
+				<p>Bravo ${ firstName.firstName }, vous êtes inscrit !</p>
+			</div>
+			
+			<div class="centerLoginForm">
+				<!-- <div>
+					<h2>Connectez-vous dès maintenant :</h2>
+				</div> -->
+				<%@ include file="login.jsp" %>
+			</div>
+			
+		</div>
 <!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

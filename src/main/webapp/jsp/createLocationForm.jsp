@@ -23,43 +23,57 @@
 	<title>Ajouter un nouveau lieu</title>
 </head>
 <body>
-	<jsp:include page="header.jsp" />
-	<br>
-	<br>
 
-	<h2>Ajouter un nouveau lieu</h2>
+	<jsp:include page="header.jsp" />
 	
-	<div id="locationFormDiv">
-		<form id="locationForm" method="post" action="location/createLocation">
-			<div class="titleForm">
-			<h2>Ajouter un nouveau lieu</h2>
-			</div>
-			<div class="form-group">
-				<label for="locationName">Nom du lieu</label>
-				<input type="text" class="form-control" placeholder="Nom du lieu" id="locationName" name="locationName" required/>
-			</div>
-			<div class="form-group">
-				<label for="streetNumber">Numéro de rue</label>
-				<input type="text" class="form-control" placeholder="Numéro de rue" id="streetNumber" name="streetNumber" required />
-			</div>
-			<div class="form-group">
-				<label for="street">Rue</label>
-				<input type="text" class="form-control" placeholder="Nom de la rue" id="street" name="street" required />
-			</div>
-			<div class="form-group">
-				<label for="postCode">Code postal</label>
-				<input type="text" class="form-control" placeholder="Code postal" id="postCode" name="postCode" required />
-			</div>
-			<div class="form-group">
-				<label for="city">Ville</label>
-				<input type="text" class="form-control" placeholder="Nom de la ville" id="city" name="city" required />
-			</div>
-			<div class="form-group">
-				<label for="country">Pays</label>
-				<input type="text" class="form-control" placeholder="Nom du pays" id="country" name="country" required />
-			</div>
-			<button type="submit" class="btn btn-primary">Ajouter</button>
-		</form>
+	<div class="container1">
+	
+		<div class="divTitle1">
+			<h1>Ajouter un nouveau lieu</h1>
+		</div>
+		
+		<div id="locationFormDiv">
+		
+			<form id="locationForm" method="post" action="location/createLocation">
+				
+				<div class="form-group">
+					<label for="locationName">Nom du lieu</label>
+					<input type="text" class="form-control" placeholder="Nom du lieu" id="locationName" name="locationName" required/>
+				</div>
+				
+				<div class="form-group">
+					<label for="streetNumber">Numéro de rue</label>
+					<input type="text" class="form-control" placeholder="Numéro de rue" id="streetNumber" name="streetNumber" required />
+				</div>
+				
+				<div class="form-group">
+					<label for="street">Rue</label>
+					<input type="text" class="form-control" placeholder="Nom de la rue" id="street" name="street" required />
+				</div>
+				
+				<div class="form-group">
+					<label for="postCode">Code postal</label>
+					<input type="text" class="form-control" placeholder="Code postal" id="postCode" name="postCode" required />
+				</div>
+				
+				<div class="form-group">
+					<label for="city">Ville</label>
+					<input type="text" class="form-control" placeholder="Nom de la ville" id="city" name="city" required />
+				</div>
+				
+				<div class="form-group">
+					<label for="country">Pays</label>
+					<input type="text" class="form-control" placeholder="Nom du pays" id="country" name="country" required />
+				</div>
+				
+				<div class="buttonForm">
+					<button type="submit" class="btn btn-primary">Ajouter</button>
+				</div>
+				
+			</form>
+			
+		</div>
+		
 	</div>
 	
 	<script type="text/javascript" src="js/script.js"></script>

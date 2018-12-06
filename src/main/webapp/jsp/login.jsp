@@ -9,6 +9,8 @@
 			<label for="password">Mot de passe : </label>
 			<input type="password" name="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
 		</div>
-		<button type="submit" class="btn btn-primary">Connexion</button>
+		<div class="buttonForm">
+			<button type="submit" class="btn btn-primary">Connexion</button>
+		</div>
 	</form>
 </div>
