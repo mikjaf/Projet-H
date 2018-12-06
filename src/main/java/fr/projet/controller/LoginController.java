@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -22,6 +23,12 @@ public class LoginController {
 	@Autowired
 	@Qualifier("eventDao")
 	private DaoInterface<Event> eventDao;
+	
+	@GetMapping("/connect")
+	public String login(Model model) {
+		model.addAttribute("errorMessage", "Veuillez vous connecter ou vous inscrire pour accéder à cette page");
+		return "index";
+	}
 	
 	@PostMapping("/connect")
 	public String connect(Model model,

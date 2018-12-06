@@ -64,6 +64,29 @@
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
+	
+	<!-- **************************************************************************************** -->
+	<!--     		 	    		       Interceptors   		    					          -->
+	<!-- **************************************************************************************** -->
+	
+	<mvc:interceptors>
+	<bean id="loginInterceptor" class="fr.projet.controller.loginInterceptor">
+	 <property name="ignoreList">
+			 <list>
+				<value>/login</value>
+				<value>/errorLogin</value>
+				<value>/testLogin</value>
+				<value>/css</value>
+				<value>/connect</value>
+				<value>/registerForm</value>
+				<value>/index</value>
+			</list>
+		</property>
+	</bean>
+	
+	</mvc:interceptors>
+	
+	
 	<!-- *************************************************************************************** -->
 	
 	
