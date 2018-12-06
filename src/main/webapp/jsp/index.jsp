@@ -26,18 +26,26 @@
 
 	<jsp:include page="header.jsp"/>
 	
-	<div id="titreIndex">
-		<h1>Accueil</h1>
-	</div>
-	<p>${ errorMessage }</p>
+	<div class="container1">
 	
-	<div id="formContainer">
-		<div class="formDiv">
-			<jsp:include page="login.jsp"/>
+		<div id="titreIndex">
+			<h1>Accueil</h1>
 		</div>
-		<div class="formDiv">
-			<jsp:include page="registerForm.jsp"/>
+		
+		<p>${ errorMessage }</p>
+		
+		<div id="formContainer">
+		
+			<div class="formDiv">
+				<jsp:include page="login.jsp"/>
+			</div>
+			
+			<div class="formDiv">
+				<jsp:include page="registerForm.jsp"/>
+			</div>
+			
 		</div>
+		
 	</div>
 	
 	

@@ -1,5 +1,6 @@
 @charset "ISO-8859-1";
-/* header */
+
+/* HEADER */
 #header{ 
     background-color: #800080;
     font-size: 1.2em;
@@ -61,6 +62,15 @@
   .navigation li:last-of-type a {
     border-bottom: none;
   }
+}
+
+#titleHeader{
+	font-size: 25px;
+}
+
+.navbar-nav li{
+	display: flex;
+	align-items: center;
 }
 
 

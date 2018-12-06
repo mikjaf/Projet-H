@@ -1,5 +1,7 @@
 package fr.projet.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -32,6 +34,7 @@ public class LoginController {
 	
 	@PostMapping("/connect")
 	public String connect(Model model,
+			HttpSession session,
 			@RequestParam("email") String email, 
 			@RequestParam("password")  String password) {
 		
@@ -39,6 +42,10 @@ public class LoginController {
 		
 		if (email != null && !email.equals("") && password != null && !password.equals("") && subscriber != null && password.equals(subscriber.getPassword())) {
 			model.addAttribute("eventsList", eventDao.findAll());
+			
+			session.setAttribute("subscriber", subscriber);
+			
+			
 			return "dashboard";
 		}
 		else {
