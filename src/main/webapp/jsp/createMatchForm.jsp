@@ -27,12 +27,14 @@
 	<jsp:include page="header.jsp" />
 	
 	<div class="container1">
-	
-		<h1>Ajouter un match</h1>
 		
-		<div id="matchFormContainer">
+		<div class="eventForm">
 		
-			<form id="matchForm" method="post" action="event/createMatch">
+			<form id="matchForm" method="post" action="event/createMatch" style="background-color: white">
+			
+				<div class="divTitle1">
+					<h1>Ajouter un match</h1>
+				</div>
 			
 				<div id="matchFormDiv">
 				
@@ -40,7 +42,7 @@
 					
 						<div class="form-group">
 							<label for="title">Titre</label>
-							<input type="text" class="form-control" placeholder="titre" id="title" name="title" required/>
+							<input type="text" class="form-control" placeholder="ex : HBC Nantes - Paris SG" id="title" name="title" required/>
 						</div>
 						
 						<div class="form-group">
@@ -71,7 +73,7 @@
 						
 						<div class="form-group">
 							<label for="description">Description</label>
-							<textarea type="text" class="form-control" placeholder="description" id="description" name="description" rows="3" required></textarea>
+							<textarea type="text" class="form-control" placeholder="ex : Venez nombreux supporter le H !" id="description" name="description" rows="3" required></textarea>
 						</div>
 						
 						<input type="hidden" name ="eventType" value="Match">
@@ -101,7 +103,7 @@
 						
 						<div class="form-group">
 							<label for="transportation">Transport</label>
-							<input type="text" class="form-control" placeholder="transport" id="transportation" name="transportation" />
+							<input type="text" class="form-control" placeholder="ex : Car" id="transportation" name="transportation" />
 						</div>
 						
 						<div class="form-group">
@@ -116,14 +118,14 @@
 						
 						<div class="form-group">
 							<label for="participantMax">Nombre de places maximales</label>
-							<input type="number" class="form-control" placeholder="Nombre de places" id="participantMax" name="participantMax"/>
+							<input type="number" class="form-control" placeholder="ex : 50" id="participantMax" name="participantMax"/>
 						</div>
 						
 					</div>
 					
 				</div>
 				
-					<div id="matchFormDiv3">
+					<div class="buttonForm">
 					
 						<div>
 							<button type="submit" class="btn btn-primary">Ajouter</button>

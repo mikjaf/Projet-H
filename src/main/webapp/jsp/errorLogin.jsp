@@ -27,8 +27,11 @@
 	<jsp:include page="header.jsp" />
 
 	<div class="container1">
-		<div>
-			<h1>Les identifiants sont incorrects. Veuillez ré-essayer !</h1>
+		<div class="div1">
+			<div class="divTitle1">
+				<h1>Les identifiants sont incorrects.</h1>
+				<p>Veuillez ré-essayer !</p>
+			</div>
 		</div>
 		<div class="centerLoginForm">
 			<%@ include file="login.jsp" %>

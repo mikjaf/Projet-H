@@ -1,86 +1,50 @@
 @charset "ISO-8859-1";
 
-/* HEADER */
-#header{ 
-    background-color: #800080;
-    font-size: 1.2em;
-    color: #ffff11;
-    display: flex;
- } 
-
-#projectTitle{
-	padding-left:10px;
-}  
-.navigation {
-  list-style: none;
-  margin: 0; 
-  
-  background: #800080;
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-end;
-}
-
-.navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color:  #ffff11;
-}
-
-.navigation a:hover {
-  background: darken(deepskyblue, 2%);
-}
-
-@media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .navigation {
-    -webkit-flex-flow: column wrap;
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  
-  .navigation a { 
-    text-align: center; 
-    padding: 10px;
-    border-top: 1px solid rgba(255,255,255,0.3); 
-    border-bottom: 1px solid rgba(0,0,0,0.1); 
-  }
-
-  
-  .navigation li:last-of-type a {
-    border-bottom: none;
-  }
-}
-
-#titleHeader{
-	font-size: 25px;
-}
-
-.navbar-nav li{
-	display: flex;
-	align-items: center;
-}
-
 
 /* GENERIQUE */
 
-.container1{
-	margin: 25px;
-	padding-left: 200px;
-	padding-right: 200px;
+html { 
+  background: url(https://ultrh.webnode.fr/_files/200000047-c2bffc3ba3/33691165_10155745185528666_4380305251039707136_o.jpg) no-repeat center center fixed; 
+  background-size: cover;
 }
+
+body{
+	background-color: rgba(0,0,0, 0.5);
+	background-size: cover;
+	height: 1000px;
+   
+}
+
+.container1{
+	margin-top: 25px;
+	margin-left: 15%;
+	margin-right: 15%;
+	display: flex;
+	flex-direction: column;
+}
+
+.div1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 25px;
+	background-color: white;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 10px;
+	}
+
+.div2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.div2 p{
+	color: red;
+	font-weight: bold;
+	}
 
 
 .buttonForm{
@@ -90,13 +54,31 @@
 
 
 .divTitle1{
-	margin-bottom: 50px;
 }
+
+
+
+
+
+
+
+/* TABLE : DASHBOARD + LISTE EVENTS */
 
 .divTable1{
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-top: 50px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	margin-bottom: 50px;
 }
+
 
 .divTable1 table{
 	width: 1000px;
@@ -104,22 +86,90 @@
 
 .divTable1 table tr th, .divTable1 table tr td{
 	width: 100px;
+	border: 1px solid black;
 }
 
 
 
-/* Index */
-
-#titreIndex{
+.divTable2{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+	padding-bottom: 25px;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
 	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
+
+
+.divTable2 table{
+	width: 1000px;
+}
+
+.divTable2 table tr th, .divTable2 table tr td{
+	width: 100px;
+	border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* LISTE EVENTS */
+
+
+.divList1{
+	padding: 25px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+
+
+
+
+/* EVENT FORM */
+
+.eventForm{
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+
+/* Formulaire de création d'atelier */
+
+#workshopForm{
+    width: 600px;
+    padding: 30px;
+    border-radius: 3%;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+} 
+
+
+
+
+
+
+
+
+
+
 
 
 /* Formulaire de connexion */ 
 
 #loginForm{
     width: 300px;
-    height: 310px;
     margin: 50px;
     padding: 30px;
     border-radius: 3%;
@@ -129,11 +179,17 @@
 
 
 
+
+
+
+
+
+
+
 /* Formulaire d'inscription */
 
 #registerForm{
     width: 300px;
-    height: 600px;
     margin: 50px;
     padding: 30px;
     border-radius: 3%;
@@ -163,6 +219,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+	margin-left: 200px;
+	margin-right: 200px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 #eventButton{
@@ -182,7 +245,6 @@
 
 #locationForm{
     width: 500px;
-    margin: 50px;
     padding: 30px;
     border-radius: 3%;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -204,7 +266,6 @@
 }
 
 #matchForm{
-    margin: 50px;
     padding: 30px;
     border-radius: 3%;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -241,11 +302,11 @@
 #meetingFormContainer{
 	display: flex;
 	justify-content: center;
+	margin-top: 25px;
 }
 
 #meetingForm{
     width: 600px;
-    margin: 50px;
     padding: 30px;
     border-radius: 3%;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -253,20 +314,105 @@
 
 
 
+
+
 /* DASHBOARD */
 
 #dashboard1{
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 25px;
+	justify-content: center;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-top: 50px;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	margin-bottom: 50px;
 	}
+	
+#dashboard2{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 25px;
+	justify-content: space-between;
+	}
+	
+#dashboard3 table tr th, #dashboard3 table tr td{
+	width: 30%;
+	border: 1px solid black;
+}
+	
+#dashboard3 table{
+	width: 100%;
+	}
+
+
+
+
+/* PAGE EVENT */
+
+.event1{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); 
+	padding-bottom: 25px;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+
+.navbar{
+	padding-left: 300px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.navbar div ul li{
+	margin-left: 25px;
+}
+
+
 
 
 
 /* h1 */
 h1 {
-	color: #800080;
+	color: #800080; 
 }
 
 h2 {

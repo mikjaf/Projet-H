@@ -27,13 +27,14 @@
 	<jsp:include page="header.jsp" />
 	
 	<div class="container1">
-		<div class="divTitle1">
-			<h1>Créer une réunion</h1>
-		</div>
 		
-		<div id="meetingFormContainer">
+		<div class="eventForm">
 		
-			<form id="meetingForm" action="event/createMeeting" method="post">
+			<form id="meetingForm" action="event/createMeeting" method="post" style="background-color: white">
+			
+				<div class="divTitle1">
+					<h1>Ajouter une réunion</h1>
+				</div>
 			
 				<div class="form-group">
 					<label for="title">Sujet</label>
@@ -42,7 +43,7 @@
 				
 				<div class="form-group">
 					<label for="date">Date</label>
-					<input type="date" class="form-control" placeholder="03/09/2018" id="date" name="date"/>
+					<input type="date" class="form-control" id="date" name="date"/>
 				</div>
 				
 				<div class="form-group">
@@ -57,12 +58,12 @@
 				
 				<div class="form-group">
 					<label for="durationTime">Durée</label>
-					<input type="text" class="form-control" placeholder="durée" id="durationTime" name="durationTime" required/>
+					<input type="text" class="form-control" placeholder="ex : 2 heures" id="durationTime" name="durationTime" required/>
 				</div>
 				
 				<div class="form-group">
 					<label for="description">Description</label>
-					<textarea type="text" class="form-control" placeholder="description" id="description" name="description" rows="3" required></textarea>
+					<textarea type="text" class="form-control" placeholder="ex : Le sujet de la réunion de ce jour est..." id="description" name="description" rows="3" required></textarea>
 				</div>
 				
 				<div class="buttonForm">

@@ -27,12 +27,17 @@
 	<jsp:include page="header.jsp"/>
 	
 	<div class="container1">
-	
-		<div id="titreIndex">
-			<h1>Accueil</h1>
-		</div>
 		
-		<p>${ errorMessage }</p>
+		<div class="div1">
+		
+			<div class="divTitle1">
+				<h1>Bienvenue sur l'agenda des Ultr'H !</h1>
+			</div>
+			
+			<div class="div2">
+				<p>${ errorMessage }</p>
+			</div>
+		</div>
 		
 		<div id="formContainer">
 		

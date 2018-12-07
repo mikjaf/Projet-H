@@ -1,5 +1,5 @@
 <div id="registerDiv">
-	<form id="registerForm" action="addSubscriber" method="post">
+	<form id="registerForm" action="addSubscriber" method="post" style="background-color: white">
 		<h2>S'inscrire</h2>
 		<div class="form-group">
 			<label for="lastname">Nom : </label>

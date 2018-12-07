@@ -29,59 +29,72 @@
 	
 	<div class="container1">
 	
-		<div id="dashboard1">
-			<h1>Dashboard</h1>
-			<a href="event/createEvent" class="btn btn-info">Ajouter un nouvel élément</a>
-		</div>
 		
-		<div class="divTable1">
-			<table class="table table-bordered">
-				<tr>
-					<th>Type de l'événement</th>
-					<th>Titre</th>
-					<th>Date</th>
-				</tr>
+		<div id="dashboard1">
+		
+			<div id="dashboard2">
+			
+				<div>
+				</div>
 				
-				<core:forEach var="event" items="${ eventsList }">
-				<tr>
-					<core:choose>
-						<core:when test="${ event.eventType == 'Atelier' }">
-							<td class="table-primary"><a href="event/workshop/${ event.id }">${ event.title }</a></td>
-						</core:when>
-						<core:when test="${ event.eventType == 'Reunion' }">
-							<td class="table-success"><a href="event/meeting/${ event.id }">${ event.title }</a></td>
-						</core:when>
-						<core:when test="${ event.eventType == 'Match' }">
-							<td class="table-danger"><a href="event/match/${ event.id }">${ event.title }</a></td>
-						</core:when>
-					</core:choose>
+				<div class="divTitle1">
+					<h1>Dashboard</h1>
+				</div>
+				
+				<div class="divTitle1">
+					<a href="event/createEvent" class="btn btn-info">Ajouter un nouvel élément</a>
+				</div>
+				
+			</div>
+			<div id="dashboard3">
+				<table class="table table-bordered">
+					<tr style="background-color: white">
+						<th>Type de l'événement</th>
+						<th>Titre</th>
+						<th>Date</th>
+					</tr>
 					
-					<core:choose>
-						<core:when test="${ event.eventType == 'Atelier' }">
-							<td class="table-primary">${ event.eventType }</td>
-						</core:when>
-						<core:when test="${ event.eventType == 'Reunion' }">
-							<td class="table-success">${ event.eventType }</td>
-						</core:when>
-						<core:when test="${ event.eventType == 'Match' }">
-							<td class="table-danger">${ event.eventType }</td>
-						</core:when>
-					</core:choose>
-					
-					<core:choose>
-						<core:when test="${ event.eventType == 'Atelier' }">
-							<td class="table-primary"><fmt:formatDate value="${ event.date }" pattern="EEEE dd MMMM" /></td>
-						</core:when>
-						<core:when test="${ event.eventType == 'Reunion' }">
-							<td class="table-success"><fmt:formatDate value="${ event.date }" pattern="EEEE dd MMMM" /></td>
-						</core:when>
-						<core:when test="${ event.eventType == 'Match' }">
-							<td class="table-danger"><fmt:formatDate value="${ event.date }" pattern="EEEE dd MMMM" /></td>
-						</core:when>
-					</core:choose>
-				</tr>
-				</core:forEach>
-			</table>
+					<core:forEach var="event" items="${ eventsList }">
+					<tr>
+						<core:choose>
+							<core:when test="${ event.eventType == 'Atelier' }">
+								<td class="table-primary"><a href="event/workshop/${ event.id }">${ event.title }</a></td>
+							</core:when>
+							<core:when test="${ event.eventType == 'Reunion' }">
+								<td class="table-success"><a href="event/meeting/${ event.id }">${ event.title }</a></td>
+							</core:when>
+							<core:when test="${ event.eventType == 'Match' }">
+								<td class="table-danger"><a href="event/match/${ event.id }">${ event.title }</a></td>
+							</core:when>
+						</core:choose>
+						
+						<core:choose>
+							<core:when test="${ event.eventType == 'Atelier' }">
+								<td class="table-primary">${ event.eventType }</td>
+							</core:when>
+							<core:when test="${ event.eventType == 'Reunion' }">
+								<td class="table-success">${ event.eventType }</td>
+							</core:when>
+							<core:when test="${ event.eventType == 'Match' }">
+								<td class="table-danger">${ event.eventType }</td>
+							</core:when>
+						</core:choose>
+						
+						<core:choose>
+							<core:when test="${ event.eventType == 'Atelier' }">
+								<td class="table-primary"><fmt:formatDate value="${ event.date }" pattern="EEEE dd MMMM" /></td>
+							</core:when>
+							<core:when test="${ event.eventType == 'Reunion' }">
+								<td class="table-success"><fmt:formatDate value="${ event.date }" pattern="EEEE dd MMMM" /></td>
+							</core:when>
+							<core:when test="${ event.eventType == 'Match' }">
+								<td class="table-danger"><fmt:formatDate value="${ event.date }" pattern="EEEE dd MMMM" /></td>
+							</core:when>
+						</core:choose>
+					</tr>
+					</core:forEach>
+				</table>
+			</div>
 		</div>
 	</div>
 	

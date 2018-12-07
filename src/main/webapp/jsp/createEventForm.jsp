@@ -26,14 +26,17 @@
 	<jsp:include page="header.jsp" />
 
 	<div class="container1">
-		<div class="divTitle1">
-			<h1>Ajouter un nouvel élément</h1>
-		</div>
 		
 		<div id="eventDiv1">
+		
+			<div class="divTitle1">
+				<h1>Ajouter un nouvel élément</h1>
+			</div>
+			
 			<div>
 				<p>Choisissez l'élément de votre choix :</p>
 			</div>
+			
 			<div id="eventButton">
 				<div class="button1">
 					<a href="event/createWorkshop" class="btn btn-outline-primary"><b>Atelier</b></a>
@@ -48,6 +51,7 @@
 					<a href="location/createLocation" class="btn btn-outline-warning"><b>Lieu</b></a>
 				</div>
 			</div>
+			
 		</div>
 		
 		

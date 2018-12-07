@@ -28,7 +28,7 @@ public class LoginController {
 	
 	@GetMapping("/connect")
 	public String login(Model model) {
-		model.addAttribute("errorMessage", "Veuillez vous connecter ou vous inscrire pour accéder à cette page");
+		model.addAttribute("errorMessage", "Veuillez vous connecter ou vous inscrire pour accéder à cette page.");
 		return "index";
 	}
 	

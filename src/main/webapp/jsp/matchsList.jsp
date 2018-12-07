@@ -27,13 +27,15 @@
 	<jsp:include page="header.jsp" />
 	
 	<div class="container1">
-		<div class="divTitle1">
-			<h1>Liste des matchs</h1>
-		</div>
+	
+		<div class="divTable2">
 		
-		<div class="divTable1">
+			<div class="divTitle1">
+				<h1>Liste des matchs</h1>
+			</div>
+			
 			<table class="table table-bordered">
-				<tr>
+				<tr style="background-color: white">
 					<th>Nom du match</th>
 					<th>Date</th>
 				</tr>

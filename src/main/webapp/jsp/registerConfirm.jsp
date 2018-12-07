@@ -29,9 +29,11 @@
 		
 		<div class="container1">
 		
-			<div>
-				<h1>Confirmation d'inscription</h1>
-				<p>Bravo ${ firstName.firstName }, vous êtes inscrit !</p>
+			<div class="div1">
+				<div class="divTitle1">
+					<h1>Confirmation d'inscription</h1>
+					<p>Bravo ${ firstName.firstName }, vous êtes inscrit !</p>
+				</div>
 			</div>
 			
 			<div class="centerLoginForm">

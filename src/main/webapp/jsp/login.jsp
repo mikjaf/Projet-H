@@ -1,5 +1,5 @@
 <div id="loginDiv">
-	<form id="loginForm" action="connect" method="post">
+	<form id="loginForm" action="connect" method="post" style="background-color: white">
 		<h2>Se connecter</h2>
 		<div class="form-group">
 			<label for="email">E-mail : </label>
