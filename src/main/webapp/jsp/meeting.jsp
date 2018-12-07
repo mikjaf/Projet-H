@@ -27,7 +27,7 @@
 	<jsp:include page="header.jsp" />
 	
 	<div class="container1">
-	
+
 		<div class="event1">
 		
 			<div class="divTitle1">
@@ -54,9 +54,15 @@
 					<p><b>Description : </b>${ meeting.description }</p>
 				</div>
 				
-				<div class="event3">
-					<p><b>Nombre de participants : </b>${ meeting.participantNumber }
-					<input type="submit" value="Je participe" /></p>
+				<div id="meetingParticipantsNb">
+					<p><b>Nombre de participants : </b>${ participantNumber }
+					<%-- <core:if test="${ participateAlready == false }">
+						<form method="post" action="event/meeting/participate"> 
+							<input type="hidden" name="meetingId" value="${ meeting.id }">--%>
+							 <input type="submit" value="Je participe" />
+						<%--</form>
+					</core:if> --%>
+					</p>
 				</div>
 			
 			</div>

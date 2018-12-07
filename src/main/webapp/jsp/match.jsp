@@ -4,6 +4,7 @@
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -99,6 +100,18 @@
 						${ match.transport.participantMax }
 				</div>
 				
+				<div id="matchParticipantsNb">
+					<p><b>Nombre de participants : </b>${ participantNumber }
+					
+					<%-- <core:if test="${ participateAlready == false }">
+						<form method="post" action="event/match/participate">
+							<input type="hidden" name="matchId" value="${ match.id }"> --%>
+							<input type="submit" value="Je participe" />
+						<%-- </form>
+					</core:if> --%>
+					</p>
+				</div>
+				
 				<div id="availableSeats">
 						<%-- ${ match.transport.seatstaken }  --%>
 				</div>
@@ -106,8 +119,10 @@
 			</div>
 			
 		</div>
-	
+		
 	</div>
+	
+	
 	
 	
 	<script type="text/javascript" src="js/script.js"></script>

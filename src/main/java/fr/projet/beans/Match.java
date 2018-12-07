@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -15,7 +16,7 @@ public class Match extends Event {
 	private Competition competitionType;
 	private Boolean homeAway;
 	
-	@ManyToMany(mappedBy="matchsList")
+	@ManyToMany(mappedBy="matchsList", fetch=FetchType.EAGER)
 	private List<Subscriber> subscribersList = new ArrayList<Subscriber>();
 	
 	@OneToOne
@@ -46,7 +47,10 @@ public class Match extends Event {
 		this.homeAway = homeAway;
 	}
 
-
+	public Boolean getHomeAway() {
+		return homeAway;
+	}
+	
 	public List<Subscriber> getSubscribersList() {
 		return subscribersList;
 	}
@@ -55,8 +59,7 @@ public class Match extends Event {
 	public void setSubscribersList(List<Subscriber> subscribersList) {
 		this.subscribersList = subscribersList;
 	}
-
-
+	
 	public Transport getTransport() {
 		return transport;
 	}
@@ -64,11 +67,6 @@ public class Match extends Event {
 
 	public void setTransport(Transport transport) {
 		this.transport = transport;
-	}
-
-
-	public Boolean getHomeAway() {
-		return homeAway;
 	}
 
 

@@ -53,10 +53,18 @@
 				<div class="event3">
 						<p><b>Description : </b>${ workshop.description }</p>
 				</div>
-			
+				
 				<div class="event3">
-						<input type="submit" value="Je participe" />
-						<%-- ${ workshop.participantNumber } --%>
+					<p><b>Nombre de participants : </b>${ participantNumber }
+					
+						<core:if test="${ participateAlready == false }">
+							<form method="post" action="event/workshop/participate">
+								<input type="hidden" name="workshopId" value="${ workshop.id }">
+								<input type="submit" value="Je participe" />
+							</form>
+						</core:if>
+					
+					</p>
 				</div>
 				
 			</div>

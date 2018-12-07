@@ -1,5 +1,8 @@
 package fr.projet.dao;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.TypedQuery;
@@ -10,6 +13,9 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.projet.beans.Event;
+import fr.projet.beans.Match;
+import fr.projet.beans.Meeting;
+import fr.projet.beans.Workshop;
 
 @Transactional
 public class EventDao implements DaoInterface<Event>{
@@ -41,8 +47,18 @@ public class EventDao implements DaoInterface<Event>{
 	@Override
 	public List<Event> findAll() {
 		Session session = sessionFactory.getCurrentSession();
-		TypedQuery<Event> query = session.createQuery("SELECT entity FROM Event entity ORDER BY date ASC", Event.class);
-		return query.getResultList();
+		List<Event> events = new ArrayList<Event>();
+		
+		TypedQuery<Workshop> queryWorkshop = session.createQuery("SELECT entity FROM Workshop entity", Workshop.class);		
+		events.addAll(queryWorkshop.getResultList());
+		
+		TypedQuery<Meeting> queryMeeting = session.createQuery("SELECT entity FROM Meeting entity", Meeting.class);		
+		events.addAll(queryMeeting.getResultList());
+		
+		TypedQuery<Match> queryMatch = session.createQuery("SELECT entity FROM Match entity", Match.class);		
+		events.addAll(queryMatch.getResultList());
+		
+		return events;
 	}
 
 	@Override

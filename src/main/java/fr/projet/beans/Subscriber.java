@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -16,9 +17,9 @@ public class Subscriber extends IdObject {
 	private Boolean admin;
 	private String password;
 	
-	@ManyToMany
+	@ManyToMany(fetch=FetchType.EAGER)
 	private List<Workshop> workshopsList = new ArrayList<Workshop>();
-	
+
 	@ManyToMany
 	private List<Match> matchsList = new ArrayList<Match>();
 	
@@ -101,6 +102,50 @@ public class Subscriber extends IdObject {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	
+	public List<Workshop> getWorkshopsList() {
+		return workshopsList;
+	}
+
+
+	public void setWorkshopsList(List<Workshop> workshopsList) {
+		this.workshopsList = workshopsList;
+	}
+
+
+	public List<Match> getMatchsList() {
+		return matchsList;
+	}
+
+
+	public void setMatchsList(List<Match> matchsList) {
+		this.matchsList = matchsList;
+	}
+
+
+	public List<Meeting> getMeetingsList() {
+		return meetingsList;
+	}
+
+
+	public void setMeetingsList(List<Meeting> meetingsList) {
+		this.meetingsList = meetingsList;
+	}
+
+
+	public List<Transport> getTransportsList() {
+		return transportsList;
+	}
+
+
+	public void setTransportsList(List<Transport> transportsList) {
+		this.transportsList = transportsList;
+	}
+
+
+	public Boolean getAdmin() {
+		return admin;
+	}
 	
 }

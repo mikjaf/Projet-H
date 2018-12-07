@@ -1,5 +1,6 @@
 package fr.projet.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.TypedQuery;
@@ -9,10 +10,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import fr.projet.beans.Subscriber;
 import fr.projet.beans.Workshop;
 
 @Transactional
-public class WorkshopDao implements DaoInterface<Workshop> {
+public class WorkshopDao implements WorkshopInterfaceDao {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -42,6 +44,25 @@ public class WorkshopDao implements DaoInterface<Workshop> {
 		Session session = sessionFactory.getCurrentSession();
 		TypedQuery<Workshop> query = session.createQuery("SELECT entity FROM Workshop entity", Workshop.class);
 		return query.getResultList();
+	}
+	
+	@Override
+	public List<Workshop> findByUserId(Long userId) {
+		Session session = sessionFactory.getCurrentSession();
+		TypedQuery<Workshop> query = session.createQuery("SELECT entity FROM Workshop entity", Workshop.class);
+		List<Workshop> userWorkshops = query.getResultList();
+		
+		List<Workshop> result = new ArrayList<>();
+		for (Workshop workshop : userWorkshops) {
+			for (Subscriber subscriber : workshop.getSubscribersList()) {
+				if (subscriber.getId() == userId) {
+					userWorkshops.add(workshop);
+					break;
+				}
+			}
+		}
+		
+		return result;
 	}
 
 	@Override
