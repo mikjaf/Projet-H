@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,11 +34,19 @@
 			${ workshop.equipment }
 	</div>
 	<div id="workshopParticipantsNb">
-			<input type="submit" value="Je participe" />
-			<%-- ${ workshop.participantNumber } --%>
+		<p><b>Nombre de participants : </b>${ participantNumber }
+		
+		<core:if test="${ participateAlready == false }">
+			<form method="post" action="event/workshop/participate">
+				<input type="hidden" name="workshopId" value="${ workshop.id }">
+				<input type="submit" value="Je participe" />
+			</form>
+		</core:if>
+		
+		</p>
 	</div>
 	<div id="workshopDescription">
-			${ workshop.description }
+		<p><b>Description : </b>${ workshop.description }</p>
 	</div>
 </body>
 </html>

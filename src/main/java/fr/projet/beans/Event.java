@@ -2,10 +2,10 @@ package fr.projet.beans;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 
-@Entity
+@MappedSuperclass
 public class Event extends IdObject {
 	
 	private String title;

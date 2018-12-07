@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="core"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,8 +61,17 @@
 	<div id=maxNb>
 			${ match.transport.participantMax }
 	</div>
-	<div id="availableSeats">
-			<%-- ${ match.transport.seatstaken }  --%>
+	<div id="matchParticipantsNb">
+		<p><b>Nombre de participants : </b>${ participantNumber }
+		
+		<%-- <core:if test="${ participateAlready == false }">
+			<form method="post" action="event/match/participate">
+				<input type="hidden" name="matchId" value="${ match.id }"> --%>
+				<input type="submit" value="Je participe" />
+			<%-- </form>
+		</core:if> --%>
+		
+		</p>
 	</div>
 	
 	

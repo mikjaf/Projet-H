@@ -48,9 +48,7 @@ public class SubscriberDao implements SubscriberInterfaceDao {
 		Session session = sessionFactory.getCurrentSession();
 		Subscriber subscriber = findById(id);
 		session.remove(subscriber);
-	}
-	
-	
+	}	
 	
 	/////
 	
